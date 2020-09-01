@@ -1439,7 +1439,19 @@ th.sorting_disabled {
 }
 
 .rating-table th.sorting:before, .rating-table th.sorting:after, .rating-table th.sorting_desc:before, .rating-table th.sorting_desc:after, .rating-table th.sorting_asc:before, .rating-table th.sorting_asc:after {
-  right: 2px;
+  right: 0.1428571429em;
+}
+
+.rating-table th.sorting:before, .rating-table th.sorting_asc:before {
+  top: calc(50% - 0.2142857143em);
+}
+
+.rating-table th.sorting:after, .rating-table th.sorting_desc:after {
+  top: calc(50% + 0.2142857143em);
+}
+
+.rating-table th.sorting_desc:after {
+  top: calc(50% + 0.0714285714em);
 }
 
 .rating-table tr, .rating-table th {
