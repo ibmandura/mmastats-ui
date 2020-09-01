@@ -1388,3 +1388,35 @@ th {
 th.sorting_disabled {
   padding: 5px;
 }
+
+.stats-table-heading th:nth-child(1) {
+  max-width: 60px;
+}
+
+.stats-table-heading th:nth-child(2) {
+  max-width: 140px;
+}
+
+.stats-table-heading th:nth-child(3) {
+  max-width: 190px;
+}
+
+.stats-table-heading th:nth-child(4) {
+  max-width: 120px;
+}
+
+.stats-table-heading th:nth-child(5) {
+  max-width: 120px;
+}
+
+.stats-table-heading th:nth-child(6) {
+  max-width: 190px;
+}
+
+.stats-table-heading th:nth-child(7) {
+  max-width: 190px;
+}
+
+.stats-table-heading th:nth-child(8) {
+  max-width: 190px;
+}
