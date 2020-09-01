@@ -1580,37 +1580,38 @@ th.sorting_disabled {
  */
 @media (min-width: 1201px) {
   .mainWithSidebar--figher {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-            flex-direction: row;
-    -webkit-box-pack: justify;
-            justify-content: space-between;
+    display: block;
+    *zoom: 1;
+  }
+  .mainWithSidebar--figher:before, .mainWithSidebar--figher:after {
+    content: " ";
+    display: table;
+  }
+  .mainWithSidebar--figher:after {
+    clear: both;
+  }
+  .mainWithSidebar--figher__col1 {
+    width: 66.666%;
+    width: calc(66.666% - 10px);
+    float: left;
+  }
+  .mainWithSidebar--figher__col2 {
+    width: 33.333%;
+    width: calc(33.333% - 10px);
+    float: right;
   }
   .card--rating-chart {
-    -webkit-box-ordinal-group: 2;
-            order: 1;
-    width: 66.666%;
-    width: calc(66.666% - 10px);
+    width: 100%;
   }
   .card--record-table-wrap {
-    -webkit-box-ordinal-group: 4;
-            order: 3;
-    width: 66.666%;
-    width: calc(66.666% - 10px);
+    width: 100%;
     margin: 20px 0 0 !important;
   }
   .card.fighterBio {
-    -webkit-box-ordinal-group: 3;
-            order: 2;
-    width: 33.333%;
-    width: calc(33.333% - 10px);
+    width: 100%;
   }
   .card.ms_extra_stats {
-    -webkit-box-ordinal-group: 5;
-            order: 4;
-    width: 33.333%;
-    width: calc(33.333% - 10px);
-    align-self: flex-start;
+    width: 100%;
     margin: 20px 0 0 !important;
   }
 }

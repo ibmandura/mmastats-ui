@@ -954,34 +954,48 @@ input[type="radio"]:checked + label:after {
 
 @media (min-width:1201px) {
   .mainWithSidebar--figher {
-    flex-direction:row;
-    justify-content:space-between;
+    display:block;
+
+    *zoom: 1;
+
+    &:before,
+    &:after {
+      content: " ";
+      display: table;
+    }
+
+    &:after {
+      clear: both;
+    }
+  }
+
+  .mainWithSidebar--figher__col1 {
+    width:66.666%;
+    width:calc(66.666% - 10px);
+    float:left;
+  }
+
+  .mainWithSidebar--figher__col2 {
+    width:33.333%;
+    width:calc(33.333% - 10px);
+    float:right;
   }
 
   .card--rating-chart {
-    order:1;
-    width:66.666%;
-    width:calc(66.666% - 10px);
+    width:100%;
   }
 
   .card--record-table-wrap {
-    order:3;
-    width:66.666%;
-    width:calc(66.666% - 10px);
+    width:100%;
     margin:20px 0 0 !important;
   }
 
   .card.fighterBio {
-    order:2;
-    width:33.333%;
-    width:calc(33.333% - 10px);
+    width:100%;
   }
 
   .card.ms_extra_stats {
-    order:4;
-    width:33.333%;
-    width:calc(33.333% - 10px);
-    align-self: flex-start;
+    width:100%;
     margin:20px 0 0 !important;
   }
 }

@@ -40,6 +40,9 @@
 			<div class="mainContentWrapper">
 				
 				<div class="mainWithSidebar mainWithSidebar--figher">
+
+					<div class="mainWithSidebar--figher__col1"></div>
+					<div class="mainWithSidebar--figher__col2"></div>
 					
 					<div class="card card--rating-chart">
 						<div class="short_table_title">Rating</div>
@@ -1090,6 +1093,89 @@
 		el.appendChild(sidebarTogglerEl)
 		popoverOpener(sidebarTogglerEl, el)
 		})
+		</script>
+
+		<script>
+			// Workaronud for columns on figher page
+			(function($,sr){
+
+			  // debouncing function from John Hann
+			  // http://unscriptable.com/index.php/2009/03/20/debouncing-javascript-methods/
+			  var debounce = function (func, threshold, execAsap) {
+			      var timeout;
+
+			      return function debounced () {
+			          var obj = this, args = arguments;
+			          function delayed () {
+			              if (!execAsap)
+			                  func.apply(obj, args);
+			              timeout = null;
+			          };
+
+			          if (timeout)
+			              clearTimeout(timeout);
+			          else if (execAsap)
+			              func.apply(obj, args);
+
+			          timeout = setTimeout(delayed, threshold || 100);
+			      };
+			  }
+			  // smartresize 
+			  jQuery.fn[sr] = function(fn){  return fn ? this.bind('resize', debounce(fn)) : this.trigger(sr); };
+
+			})(jQuery,'smartresize');
+
+
+			(function() {
+				var desktop = null;
+
+				var $wrap = $('.mainWithSidebar--figher')
+					 rating = $wrap.find('.card--rating-chart'),
+					 matches = $wrap.find('.card--record-table-wrap'),
+					 info = $wrap.find('.fighterBio'),
+					 stats = $wrap.find('.ms_extra_stats'),
+					 col1 = $wrap.find('.mainWithSidebar--figher__col1'),
+					 col2 = $wrap.find('.mainWithSidebar--figher__col2');
+
+				function arrangeForDesktop() {
+					// Move them into the columns
+					rating.appendTo(col1);
+					matches.appendTo(col1);
+					info.appendTo(col2);
+					stats.appendTo(col2);
+					desktop = true;
+				};
+
+				function reArrange() {
+					if( desktop == null ) {
+						// Hasn't been set yet
+						if( $(window).outerWidth() > 1200 ) {
+							arrangeForDesktop();
+						}
+						else if( $(window).outerWidth() <= 1200 ) {
+							arrangeForMobile();
+						}
+					}
+					if( $(window).outerWidth() > 1200 && !desktop ) {
+						arrangeForDesktop();
+					}
+					else if( $(window).outerWidth() <= 1200 && desktop ) {
+						arrangeForMobile();
+					}
+				}
+
+				function arrangeForMobile() {
+					// Move them out of the columns
+					rating.appendTo($wrap);
+					matches.appendTo($wrap);
+					info.appendTo($wrap);
+					stats.appendTo($wrap);
+					desktop = false;
+				};
+
+				$(window).smartresize(reArrange);
+				reArrange();
+			})();
 		</script>
 	</body>
 </html>
