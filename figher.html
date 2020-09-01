@@ -1,0 +1,1221 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MMAstats</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="/static/style.css">
+  <link rel="stylesheet" href="/static/icofont/icofont.min.css">
+
+  <link rel="icon" type="image/svg+xml" href="/static/MMAstats.svg">
+</head>
+
+<body class="ms_body">
+  <header>
+    <nav class="ms_navbar">
+      <div class="ms_header_container" >
+        <a class="ms_header_logo" href="/">
+          <img src="/static/MMAstats.svg" class="ms_logo">
+        </a>
+
+        <i class="mobile_search_toggle icofont-search ms_search_ico"></i>
+
+        <div class="ms_header_search_wrapper">
+          <form autocomplete="off" id="fighter-search-form" class="ms_search_form" action="/search">
+            <i class="icofont-search ms_search_ico"></i>
+            <input id="ms-fighter-id" class="ms_fighter_search js-fighterSearch" type="text" name="id" placeholder="Search a fighter...">
+          </form>
+        </div>
+
+        <div class="mobile_nav_toggle">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+
+        <div class="ms_header_links">
+          <a href="/compare" class="ms_rlink">Compare</a>
+          <a href="/stats" class="ms_rlink">Stats</a>
+          <a href="/about" class="ms_rlink">About</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="mainContentWrapper">
+      
+  <div class="mainWithSidebar">
+    <div class="main">
+      <div class="card">
+        <div class="short_table_title">Rating</div>
+        <canvas id="rating-chart"></canvas>
+      </div>
+
+      <div class="card">
+  <div class="short_table_title">Matches</div>
+
+  <div class="record-table-wrapper">
+    <table id="record-table" class="ms_short_table ms_table_hover">
+      <thead>
+        <th>Promotion &amp; date</th>
+        <th>Result</th>
+        <th>Rating</th>
+        <th>Opp. rating</th>
+        <th>Opp. name</th>
+        <th>Method</th>
+        <th>Round &amp; time</th>
+      </thead>
+      <tbody>
+      
+        <tr>
+          <td class="ms_date">
+            Feb 08, 2020
+            <br>UFC
+          </td>
+          <td>
+            <span class="fight-result fight-result-win">
+              
+                <i class="icofont-trophy"></i>
+              
+
+              win
+            </span>
+          </td>
+
+          <td class="fight-rating ms_rating_score">
+            
+              
+            
+            
+              1989 <span class="fight-rating-diff fight-rating-up">(+10)</span>
+            
+          </td>
+
+          <td>1791</td>
+          <td><a href="/fighter/MTQ1OTQx" class="ms_fighter_link">Dominick Reyes</a></td>
+          <td class="ms_method">Decision (Unanimous)</td>
+          <td class="ms_round_and_time">R5<br>05:00</td>
+        </tr>
+      
+        <tr>
+          <td class="ms_date">
+            Jul 06, 2019
+            <br>UFC
+          </td>
+          <td>
+            <span class="fight-result fight-result-win">
+              
+                <i class="icofont-trophy"></i>
+              
+
+              win
+            </span>
+          </td>
+
+          <td class="fight-rating ms_rating_score">
+            
+              
+            
+            
+              1979 <span class="fight-rating-diff fight-rating-up">(+2)</span>
+            
+          </td>
+
+          <td>1821</td>
+          <td><a href="/fighter/OTAwMjE=" class="ms_fighter_link">Thiago Santos</a></td>
+          <td class="ms_method">Decision (Split)</td>
+          <td class="ms_round_and_time">R5<br>05:00</td>
+        </tr>
+      
+        <tr>
+          <td class="ms_date">
+            Mar 02, 2019
+            <br>UFC
+          </td>
+          <td>
+            <span class="fight-result fight-result-win">
+              
+                <i class="icofont-trophy"></i>
+              
+
+              win
+            </span>
+          </td>
+
+          <td class="fight-rating ms_rating_score">
+            
+              
+            
+            
+              1977 <span class="fight-rating-diff fight-rating-up">(+11)</span>
+            
+          </td>
+
+          <td>1793</td>
+          <td><a href="/fighter/Mjk0NzA=" class="ms_fighter_link">Anthony Smith</a></td>
+          <td class="ms_method">Decision (Unanimous)</td>
+          <td class="ms_round_and_time">R5<br>05:00</td>
+        </tr>
+      
+        <tr>
+          <td class="ms_date">
+            Dec 29, 2018
+            <br>UFC
+          </td>
+          <td>
+            <span class="fight-result fight-result-win">
+              
+                <i class="icofont-trophy"></i>
+              
+
+              win
+            </span>
+          </td>
+
+          <td class="fight-rating ms_rating_score">
+            
+              
+            
+            
+              1966 <span class="fight-rating-diff fight-rating-up">(+13)</span>
+            
+          </td>
+
+          <td>1828</td>
+          <td><a href="/fighter/MjYxNjI=" class="ms_fighter_link">Alexander Gustafsson</a></td>
+          <td class="ms_method">KO (Punches)</td>
+          <td class="ms_round_and_time">R3<br>02:02</td>
+        </tr>
+      
+        <tr>
+          <td class="ms_date">
+            Jul 29, 2017
+            <br>UFC
+          </td>
+          <td>
+            <span class="fight-result fight-result-nc">
+              
+                <i class="icofont-not-allowed"></i>
+              
+
+              nc
+            </span>
+          </td>
+
+          <td class="fight-rating ms_rating_score">
+            
+              
+            
+            
+              1953 
+            
+          </td>
+
+          <td>1928</td>
+          <td><a href="/fighter/NTIzMTE=" class="ms_fighter_link">Daniel Cormier</a></td>
+          <td class="ms_method">No Contest (Overturned by CSAC)</td>
+          <td class="ms_round_and_time">R3<br>03:01</td>
+        </tr>
+      
+        <tr>
+          <td class="ms_date">
+            Apr 23, 2016
+            <br>UFC
+          </td>
+          <td>
+            <span class="fight-result fight-result-win">
+              
+                <i class="icofont-trophy"></i>
+              
+
+              win
+            </span>
+          </td>
+
+          <td class="fight-rating ms_rating_score">
+            
+              
+            
+            
+              1953 <span class="fight-rating-diff fight-rating-up">(+10)</span>
+            
+          </td>
+
+          <td>1764</td>
+          <td><a href="/fighter/Mzg4NDI=" class="ms_fighter_link">Ovince St. Preux</a></td>
+          <td class="ms_method">Decision (Unanimous)</td>
+          <td class="ms_round_and_time">R5<br>05:00</td>
+        </tr>
+      
+        <tr>
+          <td class="ms_date">
+            Jan 03, 2015
+            <br>UFC
+          </td>
+          <td>
+            <span class="fight-result fight-result-win">
+              
+                <i class="icofont-trophy"></i>
+              
+
+              win
+            </span>
+          </td>
+
+          <td class="fight-rating ms_rating_score">
+            
+              
+            
+            
+              1943 <span class="fight-rating-diff fight-rating-up">(+17)</span>
+            
+          </td>
+
+          <td>1866</td>
+          <td><a href="/fighter/NTIzMTE=" class="ms_fighter_link">Daniel Cormier</a></td>
+          <td class="ms_method">Decision (Unanimous)</td>
+          <td class="ms_round_and_time">R5<br>05:00</td>
+        </tr>
+      
+        <tr>
+          <td class="ms_date">
+            Apr 26, 2014
+            <br>UFC
+          </td>
+          <td>
+            <span class="fight-result fight-result-win">
+              
+                <i class="icofont-trophy"></i>
+              
+
+              win
+            </span>
+          </td>
+
+          <td class="fight-rating ms_rating_score">
+            
+              
+            
+            
+              1926 <span class="fight-rating-diff fight-rating-up">(+16)</span>
+            
+          </td>
+
+          <td>1846</td>
+          <td><a href="/fighter/NDY1NQ==" class="ms_fighter_link">Glover Teixeira</a></td>
+          <td class="ms_method">Decision (Unanimous)</td>
+          <td class="ms_round_and_time">R5<br>05:00</td>
+        </tr>
+      
+        <tr>
+          <td class="ms_date">
+            Sep 21, 2013
+            <br>UFC
+          </td>
+          <td>
+            <span class="fight-result fight-result-win">
+              
+                <i class="icofont-trophy"></i>
+              
+
+              win
+            </span>
+          </td>
+
+          <td class="fight-rating ms_rating_score">
+            
+              
+            
+            
+              1910 <span class="fight-rating-diff fight-rating-up">(+15)</span>
+            
+          </td>
+
+          <td>1808</td>
+          <td><a href="/fighter/MjYxNjI=" class="ms_fighter_link">Alexander Gustafsson</a></td>
+          <td class="ms_method">Decision (Unanimous)</td>
+          <td class="ms_round_and_time">R5<br>05:00</td>
+        </tr>
+      
+        <tr>
+          <td class="ms_date">
+            Apr 27, 2013
+            <br>UFC
+          </td>
+          <td>
+            <span class="fight-result fight-result-win">
+              
+                <i class="icofont-trophy"></i>
+              
+
+              win
+            </span>
+          </td>
+
+          <td class="fight-rating ms_rating_score">
+            
+              
+            
+            
+              1895 <span class="fight-rating-diff fight-rating-up">(+16)</span>
+            
+          </td>
+
+          <td>1798</td>
+          <td><a href="/fighter/NDExMg==" class="ms_fighter_link">Chael Sonnen</a></td>
+          <td class="ms_method">TKO (Elbows and Punches)</td>
+          <td class="ms_round_and_time">R1<br>04:33</td>
+        </tr>
+      
+        <tr>
+          <td class="ms_date">
+            Sep 22, 2012
+            <br>UFC
+          </td>
+          <td>
+            <span class="fight-result fight-result-win">
+              
+                <i class="icofont-trophy"></i>
+              
+
+              win
+            </span>
+          </td>
+
+          <td class="fight-rating ms_rating_score">
+            
+              
+            
+            
+              1879 <span class="fight-rating-diff fight-rating-up">(+14)</span>
+            
+          </td>
+
+          <td>1759</td>
+          <td><a href="/fighter/MTU2" class="ms_fighter_link">Vitor Belfort</a></td>
+          <td class="ms_method">Submission (Keylock)</td>
+          <td class="ms_round_and_time">R4<br>00:54</td>
+        </tr>
+      
+        <tr>
+          <td class="ms_date">
+            Apr 21, 2012
+            <br>UFC
+          </td>
+          <td>
+            <span class="fight-result fight-result-win">
+              
+                <i class="icofont-trophy"></i>
+              
+
+              win
+            </span>
+          </td>
+
+          <td class="fight-rating ms_rating_score">
+            
+              
+            
+            
+              1865 <span class="fight-rating-diff fight-rating-up">(+20)</span>
+            
+          </td>
+
+          <td>1837</td>
+          <td><a href="/fighter/MTAyMDA=" class="ms_fighter_link">Rashad Evans</a></td>
+          <td class="ms_method">Decision (Unanimous)</td>
+          <td class="ms_round_and_time">R5<br>05:00</td>
+        </tr>
+      
+        <tr>
+          <td class="ms_date">
+            Dec 10, 2011
+            <br>UFC
+          </td>
+          <td>
+            <span class="fight-result fight-result-win">
+              
+                <i class="icofont-trophy"></i>
+              
+
+              win
+            </span>
+          </td>
+
+          <td class="fight-rating ms_rating_score">
+            
+              
+            
+            
+              1845 <span class="fight-rating-diff fight-rating-up">(+19)</span>
+            
+          </td>
+
+          <td>1819</td>
+          <td><a href="/fighter/NzUxMw==" class="ms_fighter_link">Lyoto Machida</a></td>
+          <td class="ms_method">Technical Submission (Guillotine Choke)</td>
+          <td class="ms_round_and_time">R2<br>04:26</td>
+        </tr>
+      
+        <tr>
+          <td class="ms_date">
+            Sep 24, 2011
+            <br>UFC
+          </td>
+          <td>
+            <span class="fight-result fight-result-win">
+              
+                <i class="icofont-trophy"></i>
+              
+
+              win
+            </span>
+          </td>
+
+          <td class="fight-rating ms_rating_score">
+            
+              
+            
+            
+              1826 <span class="fight-rating-diff fight-rating-up">(+30)</span>
+            
+          </td>
+
+          <td>1796</td>
+          <td><a href="/fighter/MzQ4" class="ms_fighter_link">Quinton Jackson</a></td>
+          <td class="ms_method">Submission (Rear-Naked Choke)</td>
+          <td class="ms_round_and_time">R4<br>01:14</td>
+        </tr>
+      
+        <tr>
+          <td class="ms_date">
+            Mar 19, 2011
+            <br>UFC
+          </td>
+          <td>
+            <span class="fight-result fight-result-win">
+              
+                <i class="icofont-trophy"></i>
+              
+
+              win
+            </span>
+          </td>
+
+          <td class="fight-rating ms_rating_score">
+            
+              
+            
+            
+              1796 <span class="fight-rating-diff fight-rating-up">(+34)</span>
+            
+          </td>
+
+          <td>1808</td>
+          <td><a href="/fighter/NTcwNw==" class="ms_fighter_link">Mauricio Rua</a></td>
+          <td class="ms_method">TKO (Punches and Knees)</td>
+          <td class="ms_round_and_time">R3<br>02:37</td>
+        </tr>
+      
+        <tr>
+          <td class="ms_date">
+            Feb 05, 2011
+            <br>UFC
+          </td>
+          <td>
+            <span class="fight-result fight-result-win">
+              
+                <i class="icofont-trophy"></i>
+              
+
+              win
+            </span>
+          </td>
+
+          <td class="fight-rating ms_rating_score">
+            
+              
+            
+            
+              1762 <span class="fight-rating-diff fight-rating-up">(+34)</span>
+            
+          </td>
+
+          <td>1738</td>
+          <td><a href="/fighter/MjI4NTg=" class="ms_fighter_link">Ryan Bader</a></td>
+          <td class="ms_method">Submission (Guillotine Choke)</td>
+          <td class="ms_round_and_time">R2<br>04:20</td>
+        </tr>
+      
+        <tr>
+          <td class="ms_date">
+            Aug 01, 2010
+            <br>UFC
+          </td>
+          <td>
+            <span class="fight-result fight-result-win">
+              
+                <i class="icofont-trophy"></i>
+              
+
+              win
+            </span>
+          </td>
+
+          <td class="fight-rating ms_rating_score">
+            
+              
+            
+            
+              1728 <span class="fight-rating-diff fight-rating-up">(+40)</span>
+            
+          </td>
+
+          <td>1769</td>
+          <td><a href="/fighter/NDM1" class="ms_fighter_link">Vladimir Matyushenko</a></td>
+          <td class="ms_method">TKO (Elbows)</td>
+          <td class="ms_round_and_time">R1<br>01:52</td>
+        </tr>
+      
+        <tr>
+          <td class="ms_date">
+            Mar 21, 2010
+            <br>UFC
+          </td>
+          <td>
+            <span class="fight-result fight-result-win">
+              
+                <i class="icofont-trophy"></i>
+              
+
+              win
+            </span>
+          </td>
+
+          <td class="fight-rating ms_rating_score">
+            
+              
+            
+            
+              1688 <span class="fight-rating-diff fight-rating-up">(+36)</span>
+            
+          </td>
+
+          <td>1651</td>
+          <td><a href="/fighter/NDg4Ng==" class="ms_fighter_link">Brandon Vera</a></td>
+          <td class="ms_method">TKO (Elbows and Punches)</td>
+          <td class="ms_round_and_time">R1<br>03:19</td>
+        </tr>
+      
+        <tr>
+          <td class="ms_date">
+            Dec 05, 2009
+            <br>UFC
+          </td>
+          <td>
+            <span class="fight-result fight-result-loss">
+              
+                <i class="icofont-thumbs-down"></i>
+              
+
+              loss
+            </span>
+          </td>
+
+          <td class="fight-rating ms_rating_score">
+            
+              
+            
+            
+              1652 <span class="fight-rating-diff fight-rating-down">(-38)</span>
+            
+          </td>
+
+          <td>1690</td>
+          <td><a href="/fighter/MTY2OTU=" class="ms_fighter_link">Matt Hamill</a></td>
+          <td class="ms_method">Disqualification (Illegal Elbows)</td>
+          <td class="ms_round_and_time">R1<br>04:14</td>
+        </tr>
+      
+        <tr>
+          <td class="ms_date">
+            Jul 11, 2009
+            <br>UFC
+          </td>
+          <td>
+            <span class="fight-result fight-result-win">
+              
+                <i class="icofont-trophy"></i>
+              
+
+              win
+            </span>
+          </td>
+
+          <td class="fight-rating ms_rating_score">
+            
+              
+            
+            
+              1690 <span class="fight-rating-diff fight-rating-up">(+31)</span>
+            
+          </td>
+
+          <td>1591</td>
+          <td><a href="/fighter/MTQ4OTI=" class="ms_fighter_link">Jake O&#39;Brien</a></td>
+          <td class="ms_method">Submission (Guillotine Choke)</td>
+          <td class="ms_round_and_time">R2<br>02:43</td>
+        </tr>
+      
+        <tr>
+          <td class="ms_date">
+            Jan 31, 2009
+            <br>UFC
+          </td>
+          <td>
+            <span class="fight-result fight-result-win">
+              
+                <i class="icofont-trophy"></i>
+              
+
+              win
+            </span>
+          </td>
+
+          <td class="fight-rating ms_rating_score">
+            
+              
+            
+            
+              1659 <span class="fight-rating-diff fight-rating-up">(+43)</span>
+            
+          </td>
+
+          <td>1632</td>
+          <td><a href="/fighter/MzAxNA==" class="ms_fighter_link">Stephan Bonnar</a></td>
+          <td class="ms_method">Decision (Unanimous)</td>
+          <td class="ms_round_and_time">R3<br>05:00</td>
+        </tr>
+      
+        <tr>
+          <td class="ms_date">
+            Aug 09, 2008
+            <br>UFC
+          </td>
+          <td>
+            <span class="fight-result fight-result-win">
+              
+                <i class="icofont-trophy"></i>
+              
+
+              win
+            </span>
+          </td>
+
+          <td class="fight-rating ms_rating_score">
+            
+              
+            
+            
+              1616 <span class="fight-rating-diff fight-rating-up">(+38)</span>
+            
+          </td>
+
+          <td>1549</td>
+          <td><a href="/fighter/MTU4MDY=" class="ms_fighter_link">Andre Gusmao</a></td>
+          <td class="ms_method">Decision (Unanimous)</td>
+          <td class="ms_round_and_time">R3<br>05:00</td>
+        </tr>
+      
+        <tr>
+          <td class="ms_date">
+            Jul 12, 2008
+            <br>unknown
+          </td>
+          <td>
+            <span class="fight-result fight-result-win">
+              
+                <i class="icofont-trophy"></i>
+              
+
+              win
+            </span>
+          </td>
+
+          <td class="fight-rating ms_rating_score">
+            
+              
+            
+            
+              1578 <span class="fight-rating-diff fight-rating-up">(+26)</span>
+            
+          </td>
+
+          <td>1418</td>
+          <td><a href="/fighter/MjUxNjk=" class="ms_fighter_link">Moyses Gabin</a></td>
+          <td class="ms_method">TKO (Punches)</td>
+          <td class="ms_round_and_time">R2<br>01:58</td>
+        </tr>
+      
+        <tr>
+          <td class="ms_date">
+            Jun 20, 2008
+            <br>unknown
+          </td>
+          <td>
+            <span class="fight-result fight-result-win">
+              
+                <i class="icofont-trophy"></i>
+              
+
+              win
+            </span>
+          </td>
+
+          <td class="fight-rating ms_rating_score">
+            
+              
+            
+            
+              1552 <span class="fight-rating-diff fight-rating-up">(+33)</span>
+            
+          </td>
+
+          <td>1441</td>
+          <td><a href="/fighter/MjQ5MTY=" class="ms_fighter_link">Parker Porter</a></td>
+          <td class="ms_method">KO (Punch)</td>
+          <td class="ms_round_and_time">R1<br>00:36</td>
+        </tr>
+      
+        <tr>
+          <td class="ms_date">
+            May 09, 2008
+            <br>unknown
+          </td>
+          <td>
+            <span class="fight-result fight-result-win">
+              
+                <i class="icofont-trophy"></i>
+              
+
+              win
+            </span>
+          </td>
+
+          <td class="fight-rating ms_rating_score">
+            
+              
+            
+            
+              1519 <span class="fight-rating-diff fight-rating-up">(+21)</span>
+            
+          </td>
+
+          <td>1317</td>
+          <td><a href="/fighter/MjU1NTQ=" class="ms_fighter_link">Ryan Verrett</a></td>
+          <td class="ms_method">TKO (Punches)</td>
+          <td class="ms_round_and_time">R1<br>00:14</td>
+        </tr>
+      
+        <tr>
+          <td class="ms_date">
+            Apr 25, 2008
+            <br>unknown
+          </td>
+          <td>
+            <span class="fight-result fight-result-win">
+              
+                <i class="icofont-trophy"></i>
+              
+
+              win
+            </span>
+          </td>
+
+          <td class="fight-rating ms_rating_score">
+            
+              
+            
+            
+              1498 <span class="fight-rating-diff fight-rating-up">(+31)</span>
+            
+          </td>
+
+          <td>1369</td>
+          <td><a href="/fighter/MzIwMDE=" class="ms_fighter_link">Anthony Pina</a></td>
+          <td class="ms_method">Submission (Guillotine Choke)</td>
+          <td class="ms_round_and_time">R1<br>01:15</td>
+        </tr>
+      
+        <tr>
+          <td class="ms_date">
+            Apr 19, 2008
+            <br>unknown
+          </td>
+          <td>
+            <span class="fight-result fight-result-win">
+              
+                <i class="icofont-trophy"></i>
+              
+
+              win
+            </span>
+          </td>
+
+          <td class="fight-rating ms_rating_score">
+            
+              
+            
+            
+              1467 <span class="fight-rating-diff fight-rating-up">(+34)</span>
+            
+          </td>
+
+          <td>1366</td>
+          <td><a href="/fighter/MTE5MjY=" class="ms_fighter_link">Carlos Eduardo</a></td>
+          <td class="ms_method">KO (Punches)</td>
+          <td class="ms_round_and_time">R3<br>00:24</td>
+        </tr>
+      
+        <tr>
+          <td class="ms_date">
+            Apr 12, 2008
+            <br>unknown
+          </td>
+          <td>
+            <span class="fight-result fight-result-win">
+              
+                <i class="icofont-trophy"></i>
+              
+
+              win
+            </span>
+          </td>
+
+          <td class="fight-rating ms_rating_score">
+            
+              
+            
+            
+              1433 <span class="fight-rating-diff fight-rating-up">(+33)</span>
+            
+          </td>
+
+          <td>1332</td>
+          <td><a href="/fighter/MjcxNDA=" class="ms_fighter_link">Brad Bernard</a></td>
+          <td class="ms_method">TKO (Punches)</td>
+          <td class="ms_round_and_time">R1<br>01:32</td>
+        </tr>
+      
+      </tbody>
+    </table>
+  </div>
+</div>
+    </div>
+
+    
+      <div class="ms_sidebar sidebar">
+  <div class="card fighterBio">
+    
+      <img src="//upload.wikimedia.org/wikipedia/commons/thumb/4/43/Jon_Jones_-_Supporting_Brain_Health_Study.jpg/220px-Jon_Jones_-_Supporting_Brain_Health_Study.jpg" alt="Jon Jones" class="fighterBio-profilePic">
+    
+    <div class="fighterBio-fullName">Jon Jones</div>
+    <div class="fighterBio-info fighterBio-dateOfBirth">Jul 19, 1987 (age 33)</div>
+    <div class="fighterBio-info">United States</div>
+    <div class="fighterBio-info">Height: 193 cm</div>
+
+    <div class="fighterBio-category">
+      Light Heavyweight
+    </div>
+
+
+    <div class="fighterBio-rating">
+      <div class="fighterBio-rating-title">Peak rating:</div>
+      <a class="fighterBio-rating-value" href="/stats?target=1&amp;stat=peak_rating&amp;sort_by=stat">1989</a>
+      <div class="fighterBio-rating-change">(#1)</div>
+    </div>
+    <div class="fighterBio-rating">
+      <div class="fighterBio-rating-title">Current rating:</div>
+      <a class="fighterBio-rating-value" href="/stats?target=1&amp;stat=curr_rating&amp;sort_by=stat">1989</a>
+      <div class="fighterBio-rating-change">(#1)</div>
+    </div>
+
+    <div class="fighterBio-recordsTitle">Record:</div>
+    <div class="fighterBio-records">
+      <div class="fighterBio-records-item">
+        <i class="icofont-trophy"></i>
+        <span class="fighterBio-records-wins">26 wins</span>
+      </div>
+      <div class="fighterBio-records-item">
+        <i class="icofont-thumbs-down"></i>
+        <span class="fighterBio-records-loses">1 loses</span>
+      </div>
+      <div class="fighterBio-records-item">
+        <i class="icofont-minus-square"></i>
+        <span class="fighterBio-records-draws">0 draws</span>
+      </div>
+      <div class="fighterBio-records-item">
+        <i class="icofont-not-allowed"></i>
+        <span class="fighterBio-records-ncs">1 ncs</span>
+      </div>
+    </div>
+  </div>
+
+  
+    <div class="card ms_extra_stats">
+      <div class="short_table_title">Stats</div>
+
+      <table class="ms_short_table" style="width: 350px">
+        <tbody>
+          <tr>
+            <td>Fastest victory</td>
+            <td>00:14 vs (Ryan Verrett)</td>
+          </tr>
+          <tr>
+            <td>Longest streak</td>
+            <td>13</td>
+          </tr>
+          <tr>
+            <td>Wins by TKO/KO</td>
+            <td>10</td>
+          </tr>
+          <tr>
+            <td>Wins by submission</td>
+            <td>6</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  
+
+</div>
+
+    
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+
+  <script src="/static/graph.js"></script>
+  <script src="/static/Chart.js"></script>
+
+  <script type="text/javascript">
+    let data = [
+      
+        { t: moment("Feb 08, 2020", "MMM DD, YYYY").valueOf(), y: 1989 },
+      
+        { t: moment("Jul 06, 2019", "MMM DD, YYYY").valueOf(), y: 1979 },
+      
+        { t: moment("Mar 02, 2019", "MMM DD, YYYY").valueOf(), y: 1977 },
+      
+        { t: moment("Dec 29, 2018", "MMM DD, YYYY").valueOf(), y: 1966 },
+      
+        { t: moment("Jul 29, 2017", "MMM DD, YYYY").valueOf(), y: 1953 },
+      
+        { t: moment("Apr 23, 2016", "MMM DD, YYYY").valueOf(), y: 1953 },
+      
+        { t: moment("Jan 03, 2015", "MMM DD, YYYY").valueOf(), y: 1943 },
+      
+        { t: moment("Apr 26, 2014", "MMM DD, YYYY").valueOf(), y: 1926 },
+      
+        { t: moment("Sep 21, 2013", "MMM DD, YYYY").valueOf(), y: 1910 },
+      
+        { t: moment("Apr 27, 2013", "MMM DD, YYYY").valueOf(), y: 1895 },
+      
+        { t: moment("Sep 22, 2012", "MMM DD, YYYY").valueOf(), y: 1879 },
+      
+        { t: moment("Apr 21, 2012", "MMM DD, YYYY").valueOf(), y: 1865 },
+      
+        { t: moment("Dec 10, 2011", "MMM DD, YYYY").valueOf(), y: 1845 },
+      
+        { t: moment("Sep 24, 2011", "MMM DD, YYYY").valueOf(), y: 1826 },
+      
+        { t: moment("Mar 19, 2011", "MMM DD, YYYY").valueOf(), y: 1796 },
+      
+        { t: moment("Feb 05, 2011", "MMM DD, YYYY").valueOf(), y: 1762 },
+      
+        { t: moment("Aug 01, 2010", "MMM DD, YYYY").valueOf(), y: 1728 },
+      
+        { t: moment("Mar 21, 2010", "MMM DD, YYYY").valueOf(), y: 1688 },
+      
+        { t: moment("Dec 05, 2009", "MMM DD, YYYY").valueOf(), y: 1652 },
+      
+        { t: moment("Jul 11, 2009", "MMM DD, YYYY").valueOf(), y: 1690 },
+      
+        { t: moment("Jan 31, 2009", "MMM DD, YYYY").valueOf(), y: 1659 },
+      
+        { t: moment("Aug 09, 2008", "MMM DD, YYYY").valueOf(), y: 1616 },
+      
+        { t: moment("Jul 12, 2008", "MMM DD, YYYY").valueOf(), y: 1578 },
+      
+        { t: moment("Jun 20, 2008", "MMM DD, YYYY").valueOf(), y: 1552 },
+      
+        { t: moment("May 09, 2008", "MMM DD, YYYY").valueOf(), y: 1519 },
+      
+        { t: moment("Apr 25, 2008", "MMM DD, YYYY").valueOf(), y: 1498 },
+      
+        { t: moment("Apr 19, 2008", "MMM DD, YYYY").valueOf(), y: 1467 },
+      
+        { t: moment("Apr 12, 2008", "MMM DD, YYYY").valueOf(), y: 1433 },
+       ].reverse()
+
+    let opNames = [
+      
+        "Dominick Reyes",
+      
+        "Thiago Santos",
+      
+        "Anthony Smith",
+      
+        "Alexander Gustafsson",
+      
+        "Daniel Cormier",
+      
+        "Ovince St. Preux",
+      
+        "Daniel Cormier",
+      
+        "Glover Teixeira",
+      
+        "Alexander Gustafsson",
+      
+        "Chael Sonnen",
+      
+        "Vitor Belfort",
+      
+        "Rashad Evans",
+      
+        "Lyoto Machida",
+      
+        "Quinton Jackson",
+      
+        "Mauricio Rua",
+      
+        "Ryan Bader",
+      
+        "Vladimir Matyushenko",
+      
+        "Brandon Vera",
+      
+        "Matt Hamill",
+      
+        "Jake O&#39;Brien",
+      
+        "Stephan Bonnar",
+      
+        "Andre Gusmao",
+      
+        "Moyses Gabin",
+      
+        "Parker Porter",
+      
+        "Ryan Verrett",
+      
+        "Anthony Pina",
+      
+        "Carlos Eduardo",
+      
+        "Brad Bernard",
+      
+    ].reverse()
+
+    let dataset = [{
+      fights: data,
+      opponentNames: opNames,
+    }]
+
+    plot('rating-chart', dataset);
+  </script>
+
+    </div>
+  </main>
+
+  <footer class="ms_column">
+    <label class="ms_follow_us">FOLLOW US</label>
+    <div class="ms_row ms_row_center" >
+      <i class="icofont-twitter" style="color: #55B1FB; height: 16px; width: 19px;"></i>
+      <label class="ms_mmastat_twitter">@MMAstat</label>
+    </div>
+    <div class="ms_row ms_row_center foot_nav">
+      <a href="/" class="foot_nav_link">HOME</a>
+      <a href="/stats" class="foot_nav_link">STATS</a>
+      <a href="/about" class="foot_nav_link">ABOUT</a>
+    </div>
+    <label class="ms_copyright">© 2020 MMAstats</label>
+  </footer>
+
+  <script src="/static/FuzzySearch.min.js"></script>
+  <script src="/static/fuzzy.js"></script>
+
+  <script src="/asset/top_fighters.js" ></script>
+  <script>
+    const topNames = Object.keys(name2id);
+    const engine = new FuzzySearch({source: topNames, output_limit: 3, thresh_include: 5.0});
+    const searchInputs = document.querySelectorAll('.js-fighterSearch');
+
+    function getInputNameAttributeFromInputId(el) {
+      // this is too much of domain knowledge, coming out of nowhere, maybe we should refactor this
+      const nameParts = el.name.split('_')
+      lastPart = nameParts[nameParts.length - 1]
+      number = parseInt(lastPart)
+      return isNaN(number) ? 'name' : `name_${number}`
+    }
+
+    searchInputs.forEach(function(el, index) {
+      const inputNameAttr = getInputNameAttributeFromInputId(el);
+      fuzzyAutocomplete(el, engine, inputNameAttr, name2id);
+    })
+  </script>
+
+  
+  <div class="js-templates" style="display: none">
+    <div class="js-sidebarDrawer-toggler-template">
+      <svg enable-background="new 0 0 32 32" height="32px" id="Layer_1" version="1.1" viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M7.701,14.276l9.586-9.585c0.879-0.878,2.317-0.878,3.195,0l0.801,0.8c0.878,0.877,0.878,2.316,0,3.194  L13.968,16l7.315,7.315c0.878,0.878,0.878,2.317,0,3.194l-0.801,0.8c-0.878,0.879-2.316,0.879-3.195,0l-9.586-9.587  C7.229,17.252,7.02,16.62,7.054,16C7.02,15.38,7.229,14.748,7.701,14.276z" fill="#FFF"/></svg>
+    </div>
+  </div>
+
+  <script>
+    const popoverOpener = function(togglerEl, destinationEl, className = 'is-expanded') {
+      togglerEl.addEventListener('click', function() {
+        togglerEl.classList.toggle(className)
+        destinationEl.classList.toggle(className)
+      })
+
+      document.body.addEventListener('click', function(e) {
+        const togglerClicked = togglerEl.contains(e.target)
+        const isExpanded = destinationEl.classList.contains(className)
+        if (!isExpanded || togglerClicked) return;
+
+        const isClickedOutsideContainer = !destinationEl.contains(e.target)
+        if (isClickedOutsideContainer) {
+          togglerEl.classList.remove(className)
+          destinationEl.classList.remove(className)
+        }
+      })
+    }
+
+    const mobileNavTogglerEl = document.querySelector('.mobile_nav_toggle')
+    const headerNavContainerEl = document.querySelector('.ms_header_links')
+    popoverOpener(mobileNavTogglerEl, headerNavContainerEl)
+
+    const mobileSearchTogglerEl = document.querySelector('.mobile_search_toggle')
+    const ms_header_containerEl = document.querySelector('.ms_header_search_wrapper')
+    popoverOpener(mobileSearchTogglerEl, ms_header_containerEl)
+
+    const sidebarTogglerHtml = document.querySelector('.js-templates .js-sidebarDrawer-toggler-template').innerHTML
+    document.querySelectorAll('.js-sidebarDrawer').forEach(function(el) {
+      el.classList.add('sidebarDrawer')
+      const sidebarTogglerEl = document.createElement('div')
+      sidebarTogglerEl.classList.add('sidebarToggle')
+      sidebarTogglerEl.innerHTML = sidebarTogglerHtml
+      el.appendChild(sidebarTogglerEl)
+      popoverOpener(sidebarTogglerEl, el)
+    })
+  </script>
+</body>
+</html>
