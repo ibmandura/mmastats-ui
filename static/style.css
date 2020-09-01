@@ -484,9 +484,9 @@ main {
 
 @media (max-width: 1200px) {
   .ms_rating_table_col {
-    -webkit-box-flex: 1;
-            flex: 1;
     max-width: 100%;
+    display: block;
+    margin: 0 auto;
   }
   .ms_rating_table_col {
     margin-bottom: 20px;
@@ -643,6 +643,7 @@ footer {
 }
 
 .fighterBio {
+  font-size: 16px;
   display: -webkit-box;
   display: flex;
   -webkit-box-orient: vertical;
@@ -653,26 +654,38 @@ footer {
   text-align: center;
 }
 
+@media (max-width: 1115px) {
+  .fighterBio {
+    font-size: 2.1524663677vw;
+  }
+}
+
+@media (max-width: 576px) {
+  .fighterBio {
+    font-size: 3.25vw;
+  }
+}
+
 .fighterBio-fullName {
   margin: 0;
-  margin-top: 20px;
+  margin-top: 0.4166666667em;
   text-align: center;
-  font-size: 48px;
+  font-size: 2.4em;
 }
 
 .fighterBio-info {
   color: var(--secondary-color);
-  line-height: 22px;
+  line-height: 1.1em;
 }
 
 .fighterBio-dateOfBirth {
-  margin-bottom: 22px;
+  margin-bottom: 1.1em;
 }
 
 .fighterBio-category {
-  margin-bottom: 16px;
-  font-size: 24px;
-  line-height: 28px;
+  margin-bottom: 0.6666666667em;
+  font-size: 1.2em;
+  line-height: 1.1666666667em;
   margin-top: var(--spacing-mobile);
 }
 
@@ -692,7 +705,7 @@ footer {
 }
 
 .fighterBio-rating-value {
-  margin: 0 8px;
+  margin: 0 0.4em;
   font-weight: bold;
   color: var(--link-color);
   text-decoration: none;
@@ -703,12 +716,12 @@ footer {
 }
 
 .fighterBio-profilePic {
-  border: 3px solid #536073;
-  margin-top: 5px;
+  border: 0.15em solid #536073;
+  margin-top: 0.25em;
   width: 100%;
   height: 100%;
-  max-width: 200px;
-  max-height: 200px;
+  max-width: 10em;
+  max-height: 10em;
   border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -720,7 +733,7 @@ footer {
 
 .fighterBio-recordsTitle {
   color: var(--secondary-color);
-  margin-bottom: 8px;
+  margin-bottom: 0.4em;
   margin-top: var(--spacing-mobile);
 }
 
@@ -737,7 +750,7 @@ footer {
 }
 
 .fighterBio-records-item {
-  padding: 0 8px;
+  padding: 0 0.4em;
   white-space: nowrap;
 }
 
@@ -1018,14 +1031,6 @@ input[type="radio"]:checked + label:after {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
           flex-direction: column;
-  width: calc((100% * 1/3) - 10px);
-}
-
-@media (max-width: 1200px) {
-  .ms_sidebar {
-    width: 100%;
-    margin: 0 !important;
-  }
 }
 
 .ms_extra_stats {
@@ -1579,67 +1584,98 @@ th.sorting_disabled {
  *
  */
 @media (min-width: 1201px) {
-  .mainWithSidebar--figher {
+  .fighter-wrap {
     display: block;
     *zoom: 1;
   }
-  .mainWithSidebar--figher:before, .mainWithSidebar--figher:after {
+  .fighter-wrap:before, .fighter-wrap:after {
     content: " ";
     display: table;
   }
-  .mainWithSidebar--figher:after {
+  .fighter-wrap:after {
     clear: both;
   }
-  .mainWithSidebar--figher__col1 {
+  .fighter-wrap .fighter-wrap__col1 {
     width: 66.666%;
     width: calc(66.666% - 10px);
     float: left;
   }
-  .mainWithSidebar--figher__col2 {
+  .fighter-wrap .fighter-wrap__col2 {
     width: 33.333%;
     width: calc(33.333% - 10px);
     float: right;
   }
-  .card--rating-chart {
+  .fighter-wrap .card--rating-chart {
     width: 100%;
   }
-  .card--record-table-wrap {
+  .fighter-wrap .card--record-table-wrap {
     width: 100%;
     margin: 20px 0 0 !important;
   }
-  .card.fighterBio {
+  .fighter-wrap .card.fighterBio {
     width: 100%;
   }
-  .card.ms_extra_stats {
+  .fighter-wrap .card.ms_extra_stats {
     width: 100%;
     margin: 20px 0 0 !important;
   }
 }
 
 @media (max-width: 1200px) {
-  .card--rating-chart,
-  .card--record-table-wrap,
-  .card.fighterBio,
-  .card.ms_extra_stats {
+  .fighter-wrap .card--rating-chart,
+  .fighter-wrap .card--record-table-wrap,
+  .fighter-wrap .card.fighterBio,
+  .fighter-wrap .card.ms_extra_stats {
     width: 100%;
   }
-  .card--rating-chart {
+  .fighter-wrap .card--rating-chart {
     -webkit-box-ordinal-group: 3;
             order: 2;
     margin-top: 20px;
   }
-  .card--record-table-wrap {
+  .fighter-wrap .card--record-table-wrap {
     -webkit-box-ordinal-group: 5;
             order: 4;
     margin-top: 20px;
   }
-  .card.fighterBio {
+  .fighter-wrap .card.fighterBio {
     -webkit-box-ordinal-group: 2;
             order: 1;
   }
-  .card.ms_extra_stats {
+  .fighter-wrap .card.ms_extra_stats {
     -webkit-box-ordinal-group: 4;
             order: 3;
     margin-top: 20px !important;
+  }
+}
+
+/*
+ *
+ * Styles for Compare Page
+ *
+ */
+.compare-chart {
+  width: 950px;
+  max-width: 96%;
+}
+
+@media (max-width: 950px) {
+  .compare-chart {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.compare-card-wrap {
+  max-width: 96%;
+}
+
+@media (max-width: 1200px) {
+  .compare-card-wrap {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .compare-card-wrap .compare-card {
+    width: 100%;
   }
 }

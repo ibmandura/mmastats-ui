@@ -1,0 +1,638 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MMAstats</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="/static/style.css">
+  <link rel="stylesheet" href="/static/icofont/icofont.min.css">
+
+  <link rel="icon" type="image/svg+xml" href="/static/MMAstats.svg">
+</head>
+
+<body class="ms_body">
+  <header>
+    <nav class="ms_navbar">
+      <div class="ms_header_container" >
+        <a class="ms_header_logo" href="/">
+          <img src="/static/MMAstats.svg" class="ms_logo">
+        </a>
+
+        <i class="mobile_search_toggle icofont-search ms_search_ico"></i>
+
+        <div class="ms_header_search_wrapper">
+          <form autocomplete="off" id="fighter-search-form" class="ms_search_form" action="/search">
+            <i class="icofont-search ms_search_ico"></i>
+            <input id="ms-fighter-id" class="ms_fighter_search js-fighterSearch" type="text" name="id" placeholder="Search a fighter...">
+          </form>
+        </div>
+
+        <div class="mobile_nav_toggle">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+
+        <div class="ms_header_links">
+          <a href="/compare" class="ms_rlink">Compare</a>
+          <a href="/stats" class="ms_rlink">Stats</a>
+          <a href="/about" class="ms_rlink">About</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="mainContentWrapper">
+      
+  <div class="main central_column">
+    <div class="ms_row ms_row_center ms_rating_table_row compare-card-wrap">
+      <div class="card ms_column ms_rating_table_col compare-card">
+        <form action="/compare" autocomplete="off" class="ms_search_form ms_search_form-tiny">
+          <i class="icofont-search ms_search_ico ms_search_ico-tiny"></i>
+          <input type="hidden" name="id_2" value="MTM1Ng=="/>
+          <input class="ms_fighter_search ms_fighter_search-tiny js-fighterSearch" type="text" name="id_1" placeholder="Fighter name">
+        </form>
+
+        
+          <div class="ms_sidebar ">
+  <div class="card fighterBio">
+    
+      <img src="//upload.wikimedia.org/wikipedia/commons/thumb/4/43/Jon_Jones_-_Supporting_Brain_Health_Study.jpg/220px-Jon_Jones_-_Supporting_Brain_Health_Study.jpg" alt="Jon Jones" class="fighterBio-profilePic">
+    
+    <div class="fighterBio-fullName">Jon Jones</div>
+    <div class="fighterBio-info fighterBio-dateOfBirth">Jul 19, 1987 (age 33)</div>
+    <div class="fighterBio-info">United States</div>
+    <div class="fighterBio-info">Height: 193 cm</div>
+
+    <div class="fighterBio-category">
+      Light Heavyweight
+    </div>
+
+
+    <div class="fighterBio-rating">
+      <div class="fighterBio-rating-title">Peak rating:</div>
+      <a class="fighterBio-rating-value" href="/stats?target=1&amp;stat=peak_rating&amp;sort_by=stat">1989</a>
+      <div class="fighterBio-rating-change">(#1)</div>
+    </div>
+    <div class="fighterBio-rating">
+      <div class="fighterBio-rating-title">Current rating:</div>
+      <a class="fighterBio-rating-value" href="/stats?target=1&amp;stat=curr_rating&amp;sort_by=stat">1989</a>
+      <div class="fighterBio-rating-change">(#1)</div>
+    </div>
+
+    <div class="fighterBio-recordsTitle">Record:</div>
+    <div class="fighterBio-records">
+      <div class="fighterBio-records-item">
+        <i class="icofont-trophy"></i>
+        <span class="fighterBio-records-wins">26 wins</span>
+      </div>
+      <div class="fighterBio-records-item">
+        <i class="icofont-thumbs-down"></i>
+        <span class="fighterBio-records-loses">1 loses</span>
+      </div>
+      <div class="fighterBio-records-item">
+        <i class="icofont-minus-square"></i>
+        <span class="fighterBio-records-draws">0 draws</span>
+      </div>
+      <div class="fighterBio-records-item">
+        <i class="icofont-not-allowed"></i>
+        <span class="fighterBio-records-ncs">1 ncs</span>
+      </div>
+    </div>
+  </div>
+
+  
+
+</div>
+
+        
+
+        <div class="ms_table_footer">
+          <a href="/fighter/Mjc5NDQ%3D" class="ms_table_footer_link" >Profile page &gt;</a>
+        </div>
+      </div>
+
+      <div class="card ms_column ms_rating_table_col compare-card">
+        <form action="/compare" autocomplete="off" class="ms_search_form ms_search_form-tiny">
+          <i class="icofont-search ms_search_ico ms_search_ico-tiny"></i>
+          <input type="hidden" name="id_1" value="Mjc5NDQ="/>
+          <input class="ms_fighter_search ms_fighter_search-tiny js-fighterSearch" type="text" name="id_2" placeholder="Fighter name">
+        </form>
+
+        
+          <div class="ms_sidebar ">
+  <div class="card fighterBio">
+    
+      <img src="//upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Anderson_Silva.png/220px-Anderson_Silva.png" alt="Anderson Silva" class="fighterBio-profilePic">
+    
+    <div class="fighterBio-fullName">Anderson Silva</div>
+    <div class="fighterBio-info fighterBio-dateOfBirth">Apr 14, 1975 (age 45)</div>
+    <div class="fighterBio-info">Brazil</div>
+    <div class="fighterBio-info">Height: 187 cm</div>
+
+    <div class="fighterBio-category">
+      Middleweight
+    </div>
+
+
+    <div class="fighterBio-rating">
+      <div class="fighterBio-rating-title">Peak rating:</div>
+      <a class="fighterBio-rating-value" href="/stats?target=4&amp;stat=peak_rating&amp;sort_by=stat">1962</a>
+      <div class="fighterBio-rating-change">(#4)</div>
+    </div>
+    <div class="fighterBio-rating">
+      <div class="fighterBio-rating-title">Current rating:</div>
+      <a class="fighterBio-rating-value" href="/stats?target=83&amp;stat=curr_rating&amp;sort_by=stat">1830</a>
+      <div class="fighterBio-rating-change">(#83)</div>
+    </div>
+
+    <div class="fighterBio-recordsTitle">Record:</div>
+    <div class="fighterBio-records">
+      <div class="fighterBio-records-item">
+        <i class="icofont-trophy"></i>
+        <span class="fighterBio-records-wins">34 wins</span>
+      </div>
+      <div class="fighterBio-records-item">
+        <i class="icofont-thumbs-down"></i>
+        <span class="fighterBio-records-loses">10 loses</span>
+      </div>
+      <div class="fighterBio-records-item">
+        <i class="icofont-minus-square"></i>
+        <span class="fighterBio-records-draws">0 draws</span>
+      </div>
+      <div class="fighterBio-records-item">
+        <i class="icofont-not-allowed"></i>
+        <span class="fighterBio-records-ncs">1 ncs</span>
+      </div>
+    </div>
+  </div>
+
+  
+
+</div>
+
+        
+
+        <div class="ms_table_footer">
+          <a href="/fighter/MTM1Ng%3D%3D" class="ms_table_footer_link" >Profile page &gt;</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card card_top_margin">
+      <div class="short_table_title">Statistics</div>
+      <table class="ms_short_table ms_compare_stats_table">
+        <thead>
+          <th></th>
+          <th>Jon Jones</th>
+          <th>Anderson Silva</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Fastest victory</td>
+            <td>00:14 vs (Ryan Verrett)</td>
+            <td>00:49 vs (Chris Leben)</td>
+          </tr>
+          <tr>
+            <td>Longest streak</td>
+            <td>13</td>
+            <td>17</td>
+          </tr>
+          <tr>
+            <td>Wins by TKO/KO</td>
+            <td>10</td>
+            <td>20</td>
+          </tr>
+          <tr>
+            <td>Wins by submission</td>
+            <td>6</td>
+            <td>6</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card card_top_margin compare-chart">
+      <div class="short_table_title">Rating</div>
+      <canvas id="rating-chart"></canvas>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+
+  <script src="/static/graph.js"></script>
+  <script src="/static/Chart.js"></script>
+
+  <script type="text/javascript">
+    let dataset = [
+      {
+        name: "Jon Jones",
+
+        fights: [
+          
+            { t: moment("Feb 08, 2020", "MMM DD, YYYY").valueOf(), y: 1989 },
+          
+            { t: moment("Jul 06, 2019", "MMM DD, YYYY").valueOf(), y: 1979 },
+          
+            { t: moment("Mar 02, 2019", "MMM DD, YYYY").valueOf(), y: 1977 },
+          
+            { t: moment("Dec 29, 2018", "MMM DD, YYYY").valueOf(), y: 1966 },
+          
+            { t: moment("Jul 29, 2017", "MMM DD, YYYY").valueOf(), y: 1953 },
+          
+            { t: moment("Apr 23, 2016", "MMM DD, YYYY").valueOf(), y: 1953 },
+          
+            { t: moment("Jan 03, 2015", "MMM DD, YYYY").valueOf(), y: 1943 },
+          
+            { t: moment("Apr 26, 2014", "MMM DD, YYYY").valueOf(), y: 1926 },
+          
+            { t: moment("Sep 21, 2013", "MMM DD, YYYY").valueOf(), y: 1910 },
+          
+            { t: moment("Apr 27, 2013", "MMM DD, YYYY").valueOf(), y: 1895 },
+          
+            { t: moment("Sep 22, 2012", "MMM DD, YYYY").valueOf(), y: 1879 },
+          
+            { t: moment("Apr 21, 2012", "MMM DD, YYYY").valueOf(), y: 1865 },
+          
+            { t: moment("Dec 10, 2011", "MMM DD, YYYY").valueOf(), y: 1845 },
+          
+            { t: moment("Sep 24, 2011", "MMM DD, YYYY").valueOf(), y: 1826 },
+          
+            { t: moment("Mar 19, 2011", "MMM DD, YYYY").valueOf(), y: 1796 },
+          
+            { t: moment("Feb 05, 2011", "MMM DD, YYYY").valueOf(), y: 1762 },
+          
+            { t: moment("Aug 01, 2010", "MMM DD, YYYY").valueOf(), y: 1728 },
+          
+            { t: moment("Mar 21, 2010", "MMM DD, YYYY").valueOf(), y: 1688 },
+          
+            { t: moment("Dec 05, 2009", "MMM DD, YYYY").valueOf(), y: 1652 },
+          
+            { t: moment("Jul 11, 2009", "MMM DD, YYYY").valueOf(), y: 1690 },
+          
+            { t: moment("Jan 31, 2009", "MMM DD, YYYY").valueOf(), y: 1659 },
+          
+            { t: moment("Aug 09, 2008", "MMM DD, YYYY").valueOf(), y: 1616 },
+          
+            { t: moment("Jul 12, 2008", "MMM DD, YYYY").valueOf(), y: 1578 },
+          
+            { t: moment("Jun 20, 2008", "MMM DD, YYYY").valueOf(), y: 1552 },
+          
+            { t: moment("May 09, 2008", "MMM DD, YYYY").valueOf(), y: 1519 },
+          
+            { t: moment("Apr 25, 2008", "MMM DD, YYYY").valueOf(), y: 1498 },
+          
+            { t: moment("Apr 19, 2008", "MMM DD, YYYY").valueOf(), y: 1467 },
+          
+            { t: moment("Apr 12, 2008", "MMM DD, YYYY").valueOf(), y: 1433 },
+           ].reverse(),
+
+        opponentNames: [
+          
+            "Dominick Reyes",
+          
+            "Thiago Santos",
+          
+            "Anthony Smith",
+          
+            "Alexander Gustafsson",
+          
+            "Daniel Cormier",
+          
+            "Ovince St. Preux",
+          
+            "Daniel Cormier",
+          
+            "Glover Teixeira",
+          
+            "Alexander Gustafsson",
+          
+            "Chael Sonnen",
+          
+            "Vitor Belfort",
+          
+            "Rashad Evans",
+          
+            "Lyoto Machida",
+          
+            "Quinton Jackson",
+          
+            "Mauricio Rua",
+          
+            "Ryan Bader",
+          
+            "Vladimir Matyushenko",
+          
+            "Brandon Vera",
+          
+            "Matt Hamill",
+          
+            "Jake O&#39;Brien",
+          
+            "Stephan Bonnar",
+          
+            "Andre Gusmao",
+          
+            "Moyses Gabin",
+          
+            "Parker Porter",
+          
+            "Ryan Verrett",
+          
+            "Anthony Pina",
+          
+            "Carlos Eduardo",
+          
+            "Brad Bernard",
+          
+        ].reverse(),
+      },
+
+      {
+        name: "Anderson Silva",
+
+        fights: [
+          
+            { t: moment("May 11, 2019", "MMM DD, YYYY").valueOf(), y: 1830 },
+          
+            { t: moment("Feb 09, 2019", "MMM DD, YYYY").valueOf(), y: 1858 },
+          
+            { t: moment("Feb 11, 2017", "MMM DD, YYYY").valueOf(), y: 1880 },
+          
+            { t: moment("Jul 09, 2016", "MMM DD, YYYY").valueOf(), y: 1866 },
+          
+            { t: moment("Feb 27, 2016", "MMM DD, YYYY").valueOf(), y: 1885 },
+          
+            { t: moment("Jan 31, 2015", "MMM DD, YYYY").valueOf(), y: 1909 },
+          
+            { t: moment("Dec 28, 2013", "MMM DD, YYYY").valueOf(), y: 1909 },
+          
+            { t: moment("Jul 06, 2013", "MMM DD, YYYY").valueOf(), y: 1934 },
+          
+            { t: moment("Oct 13, 2012", "MMM DD, YYYY").valueOf(), y: 1962 },
+          
+            { t: moment("Jul 07, 2012", "MMM DD, YYYY").valueOf(), y: 1956 },
+          
+            { t: moment("Aug 27, 2011", "MMM DD, YYYY").valueOf(), y: 1943 },
+          
+            { t: moment("Feb 05, 2011", "MMM DD, YYYY").valueOf(), y: 1930 },
+          
+            { t: moment("Aug 07, 2010", "MMM DD, YYYY").valueOf(), y: 1919 },
+          
+            { t: moment("Apr 10, 2010", "MMM DD, YYYY").valueOf(), y: 1906 },
+          
+            { t: moment("Aug 08, 2009", "MMM DD, YYYY").valueOf(), y: 1891 },
+          
+            { t: moment("Apr 18, 2009", "MMM DD, YYYY").valueOf(), y: 1879 },
+          
+            { t: moment("Oct 25, 2008", "MMM DD, YYYY").valueOf(), y: 1865 },
+          
+            { t: moment("Jul 19, 2008", "MMM DD, YYYY").valueOf(), y: 1853 },
+          
+            { t: moment("Mar 01, 2008", "MMM DD, YYYY").valueOf(), y: 1843 },
+          
+            { t: moment("Oct 20, 2007", "MMM DD, YYYY").valueOf(), y: 1828 },
+          
+            { t: moment("Jul 07, 2007", "MMM DD, YYYY").valueOf(), y: 1808 },
+          
+            { t: moment("Feb 03, 2007", "MMM DD, YYYY").valueOf(), y: 1788 },
+          
+            { t: moment("Oct 14, 2006", "MMM DD, YYYY").valueOf(), y: 1773 },
+          
+            { t: moment("Jun 28, 2006", "MMM DD, YYYY").valueOf(), y: 1745 },
+          
+            { t: moment("Apr 22, 2006", "MMM DD, YYYY").valueOf(), y: 1719 },
+          
+            { t: moment("Jan 20, 2006", "MMM DD, YYYY").valueOf(), y: 1704 },
+          
+            { t: moment("Dec 03, 2005", "MMM DD, YYYY").valueOf(), y: 1730 },
+          
+            { t: moment("Apr 30, 2005", "MMM DD, YYYY").valueOf(), y: 1714 },
+          
+            { t: moment("Dec 31, 2004", "MMM DD, YYYY").valueOf(), y: 1692 },
+          
+            { t: moment("Sep 11, 2004", "MMM DD, YYYY").valueOf(), y: 1730 },
+          
+            { t: moment("Jun 27, 2004", "MMM DD, YYYY").valueOf(), y: 1708 },
+          
+            { t: moment("Dec 20, 2003", "MMM DD, YYYY").valueOf(), y: 1669 },
+          
+            { t: moment("Jun 08, 2003", "MMM DD, YYYY").valueOf(), y: 1662 },
+          
+            { t: moment("Mar 16, 2003", "MMM DD, YYYY").valueOf(), y: 1714 },
+          
+            { t: moment("Sep 29, 2002", "MMM DD, YYYY").valueOf(), y: 1686 },
+          
+            { t: moment("Jun 23, 2002", "MMM DD, YYYY").valueOf(), y: 1678 },
+          
+            { t: moment("Jan 31, 2002", "MMM DD, YYYY").valueOf(), y: 1640 },
+          
+            { t: moment("Aug 26, 2001", "MMM DD, YYYY").valueOf(), y: 1627 },
+          
+            { t: moment("Jun 09, 2001", "MMM DD, YYYY").valueOf(), y: 1571 },
+          
+            { t: moment("Mar 02, 2001", "MMM DD, YYYY").valueOf(), y: 1554 },
+          
+            { t: moment("Dec 16, 2000", "MMM DD, YYYY").valueOf(), y: 1499 },
+          
+            { t: moment("Aug 12, 2000", "MMM DD, YYYY").valueOf(), y: 1463 },
+          
+            { t: moment("May 27, 2000", "MMM DD, YYYY").valueOf(), y: 1429 },
+          
+            { t: moment("Jun 25, 1997", "MMM DD, YYYY").valueOf(), y: 1475 },
+          
+            { t: moment("Jun 25, 1997", "MMM DD, YYYY").valueOf(), y: 1437 },
+           ].reverse(),
+
+        opponentNames: [
+          
+            "Jared Cannonier",
+          
+            "Israel Adesanya",
+          
+            "Derek Brunson",
+          
+            "Daniel Cormier",
+          
+            "Michael Bisping",
+          
+            "Nick Diaz",
+          
+            "Chris Weidman",
+          
+            "Chris Weidman",
+          
+            "Stephan Bonnar",
+          
+            "Chael Sonnen",
+          
+            "Yushin Okami",
+          
+            "Vitor Belfort",
+          
+            "Chael Sonnen",
+          
+            "Demian Maia",
+          
+            "Forrest Griffin",
+          
+            "Thales Leites",
+          
+            "Patrick Cote",
+          
+            "James Irvin",
+          
+            "Dan Henderson",
+          
+            "Rich Franklin",
+          
+            "Nate Marquardt",
+          
+            "Travis Lutter",
+          
+            "Rich Franklin",
+          
+            "Chris Leben",
+          
+            "Tony Fryklund",
+          
+            "Yushin Okami",
+          
+            "Curtis Stout",
+          
+            "Jorge Rivera",
+          
+            "Ryo Chonan",
+          
+            "Lee Murray",
+          
+            "Jeremy Horn",
+          
+            "Waldir dos Anjos",
+          
+            "Daiju Takase",
+          
+            "Carlos Newton",
+          
+            "Alexander Otsuka",
+          
+            "Alex Stiebling",
+          
+            "Roan Carneiro",
+          
+            "Hayato Sakurai",
+          
+            "Israel Albuquerque",
+          
+            "Tetsuji Kato",
+          
+            "Claudionor da Silva Fontinelle",
+          
+            "Jose Barreto",
+          
+            "Luiz Azeredo",
+          
+            "Fabricio Camoes",
+          
+            "Raimundo Pinheiro",
+          
+        ].reverse(),
+      },
+    ];
+
+    plot('rating-chart', dataset);
+  </script>
+
+    </div>
+  </main>
+
+  <footer class="ms_column">
+    <label class="ms_follow_us">FOLLOW US</label>
+    <div class="ms_row ms_row_center" >
+      <i class="icofont-twitter" style="color: #55B1FB; height: 16px; width: 19px;"></i>
+      <label class="ms_mmastat_twitter">@MMAstat</label>
+    </div>
+    <div class="ms_row ms_row_center foot_nav">
+      <a href="/" class="foot_nav_link">HOME</a>
+      <a href="/stats" class="foot_nav_link">STATS</a>
+      <a href="/about" class="foot_nav_link">ABOUT</a>
+    </div>
+    <label class="ms_copyright">© 2020 MMAstats</label>
+  </footer>
+
+  <script src="/static/FuzzySearch.min.js"></script>
+  <script src="/static/fuzzy.js"></script>
+
+  <script src="/asset/top_fighters.js" ></script>
+  <script>
+    const topNames = Object.keys(name2id);
+    const engine = new FuzzySearch({source: topNames, output_limit: 3, thresh_include: 5.0});
+    const searchInputs = document.querySelectorAll('.js-fighterSearch');
+
+    function getInputNameAttributeFromInputId(el) {
+      // this is too much of domain knowledge, coming out of nowhere, maybe we should refactor this
+      const nameParts = el.name.split('_')
+      lastPart = nameParts[nameParts.length - 1]
+      number = parseInt(lastPart)
+      return isNaN(number) ? 'name' : `name_${number}`
+    }
+
+    searchInputs.forEach(function(el, index) {
+      const inputNameAttr = getInputNameAttributeFromInputId(el);
+      fuzzyAutocomplete(el, engine, inputNameAttr, name2id);
+    })
+  </script>
+
+  
+  <div class="js-templates" style="display: none">
+    <div class="js-sidebarDrawer-toggler-template">
+      <svg enable-background="new 0 0 32 32" height="32px" id="Layer_1" version="1.1" viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M7.701,14.276l9.586-9.585c0.879-0.878,2.317-0.878,3.195,0l0.801,0.8c0.878,0.877,0.878,2.316,0,3.194  L13.968,16l7.315,7.315c0.878,0.878,0.878,2.317,0,3.194l-0.801,0.8c-0.878,0.879-2.316,0.879-3.195,0l-9.586-9.587  C7.229,17.252,7.02,16.62,7.054,16C7.02,15.38,7.229,14.748,7.701,14.276z" fill="#FFF"/></svg>
+    </div>
+  </div>
+
+  <script>
+    const popoverOpener = function(togglerEl, destinationEl, className = 'is-expanded') {
+      togglerEl.addEventListener('click', function() {
+        togglerEl.classList.toggle(className)
+        destinationEl.classList.toggle(className)
+      })
+
+      document.body.addEventListener('click', function(e) {
+        const togglerClicked = togglerEl.contains(e.target)
+        const isExpanded = destinationEl.classList.contains(className)
+        if (!isExpanded || togglerClicked) return;
+
+        const isClickedOutsideContainer = !destinationEl.contains(e.target)
+        if (isClickedOutsideContainer) {
+          togglerEl.classList.remove(className)
+          destinationEl.classList.remove(className)
+        }
+      })
+    }
+
+    const mobileNavTogglerEl = document.querySelector('.mobile_nav_toggle')
+    const headerNavContainerEl = document.querySelector('.ms_header_links')
+    popoverOpener(mobileNavTogglerEl, headerNavContainerEl)
+
+    const mobileSearchTogglerEl = document.querySelector('.mobile_search_toggle')
+    const ms_header_containerEl = document.querySelector('.ms_header_search_wrapper')
+    popoverOpener(mobileSearchTogglerEl, ms_header_containerEl)
+
+    const sidebarTogglerHtml = document.querySelector('.js-templates .js-sidebarDrawer-toggler-template').innerHTML
+    document.querySelectorAll('.js-sidebarDrawer').forEach(function(el) {
+      el.classList.add('sidebarDrawer')
+      const sidebarTogglerEl = document.createElement('div')
+      sidebarTogglerEl.classList.add('sidebarToggle')
+      sidebarTogglerEl.innerHTML = sidebarTogglerHtml
+      el.appendChild(sidebarTogglerEl)
+      popoverOpener(sidebarTogglerEl, el)
+    })
+  </script>
+</body>
+</html>

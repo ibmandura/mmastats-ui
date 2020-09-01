@@ -50,6 +50,14 @@
 		"sC": 3,
 		"tS": 0
 		},
+	"/compare.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/compare.html",
+		"oF": 0
+		},
 	"/figher.html": {
 		"cB": 0,
 		"ft": 8192,
@@ -92,19 +100,6 @@
 		"pME": 1,
 		"rFN": 0,
 		"uCM": 0
-		},
-	"/static/_tables.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/static/_tables.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
 		},
 	"/static/Chart.js": {
 		"bF": 0,
@@ -229,6 +224,32 @@
 		"opt": 0,
 		"plM": 52780316221407,
 		"prP": 0
+		},
+	"/static/scss/_fighter-bio.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/static/scss/_fighter-bio.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/static/scss/_tables.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/static/scss/_tables.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
 		},
 	"/static/style.css": {
 		"aP": 1,
