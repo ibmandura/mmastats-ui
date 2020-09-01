@@ -631,46 +631,6 @@ footer {
 .fighterBio-records-ncs {
   color: var(--flash-color-default);
 }
-.fight-result {
-  margin: 12px 8px;
-  white-space: nowrap;
-  color: #fff;
-  height: 22px;
-  border-radius: 11px;
-  display: block;
-  line-height: 22px;
-  width: 72px;
-  text-align: center;
-  font-size: 14px;
-}
-.fight-result-win {
-    background: var(--flash-color-success);
-}
-.fight-result-loss {
-  background: var(--flash-color-error);
-}
-.fight-result-draw {
-  background: var(--flash-color-info);
-}
-.fight-result-nc {
-  background: var(--flash-color-default);
-}
-.fight-rating {
-  padding: 12px 8px;
-  white-space: nowrap;
-}
-.fight-rating-diff {
-  font-weight: normal;
-}
-.fight-rating-up {
-  color: var(--flash-color-success);
-}
-.fight-rating-down {
-  color: var(--flash-color-error);
-}
-.fight-rating-same {
-  color: var(--flash-color-info);
-}
 
 #chartjs-tooltip {
   opacity: 1;
@@ -963,4 +923,3 @@ input[type="radio"]:checked + label:after {
 }
 
 @import "tables";
-@import "stats";
