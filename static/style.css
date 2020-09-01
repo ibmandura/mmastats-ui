@@ -1395,6 +1395,23 @@ th.sorting_disabled {
  * Styles Specific to the ratings table
  *
  */
+@media (min-width: 1201px) {
+  .mainWithSidebar-wide .main {
+    width: 75% !important;
+    width: calc(75% - 10px) !important;
+    margin: 0 !important;
+    margin-right: calc(10px) !important;
+  }
+  .mainWithSidebar-wide .sidebar {
+    width: 25% !important;
+    width: calc(25% - 10px) !important;
+    margin: 0 !important;
+    margin-left: calc(10px) !important;
+    padding: 40px !important;
+    padding: 40px 2.2222222222vw !important;
+  }
+}
+
 @media (max-width: 1200px) {
   .card--stats-table-wrap {
     width: 100%;

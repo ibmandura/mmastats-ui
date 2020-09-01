@@ -1,0 +1,117 @@
+/*
+ *
+ * Styles Specific to the ratings table
+ *
+ */
+
+.mainWithSidebar-wide {
+	@media (min-width:1201px) {
+		.main {
+			width:75% !important;
+			width:calc(75% - 10px) !important;
+			margin:0 !important;
+			margin-right:calc(10px) !important;
+		}
+
+		.sidebar {
+			width:25% !important;
+			width:calc(25% - 10px) !important;
+			margin:0 !important;
+			margin-left:calc(10px) !important;
+			padding:40px !important;
+			padding:40px #{(40/1800*100)+'vw'} !important;
+		}
+	}
+}
+
+.card--stats-table-wrap {
+	@media (max-width:1200px) {
+		width:100%;
+		max-width:100%;
+
+		&,& *, & *:before, & *:after {
+			box-sizing:border-box;
+		}
+	}
+
+	@media (min-width:1201px) {
+		width:100% !important;
+	}
+}
+
+.rating-table {
+	font-size:20px; // setting a root font size
+	
+	@media (max-width:1200px) {
+		// It looks good in 969px window, so let's set the font based on the viewport width
+		font-size:#{(20/969*100)+'vw'};
+		margin:0 auto;
+		width:100% !important;
+	}
+
+	@media (min-width:1201px) {
+		width:100% !important;
+	}
+
+	tr {
+		font-size:(14/20)+em;
+	}
+
+	th {
+		font-size:1em;
+		padding: (12/14)+em (8/14)+em;
+
+		&.sorting, &.sorting_desc, &.sorting_asc {
+			&:before, &:after {
+				right: (2/14)+em;
+			}
+		}
+
+		&.sorting:before, &.sorting_asc:before {
+			top: calc(50% - #{(3/14)+em});
+		}
+
+		&.sorting:after, &.sorting_desc:after {
+			top: calc(50% + #{(3/14)+em});
+		}
+
+		&.sorting_desc:after {
+			top: calc(50% + #{(1/14)+em});
+		}
+	}
+
+	tr, th {
+		height:(40/14)+em;
+	}
+
+	td {
+		font-size:1em;
+
+		> a {
+			padding: (12/14)+em (8/14)+em;
+		}
+
+		&.ms_date {
+			font-size:(14/14)+em;
+		}
+
+		&.ms_method {
+			font-size:(15/14)+em;
+		}
+	}
+
+	.sorting, .sorting_asc, .sorting_desc {
+		padding-right: (16/14)+em;
+	}
+
+	th {
+		&:nth-child(1) { max-width: (60/14)+em; }
+		&:nth-child(2) { max-width: (140/14)+em; }
+		&:nth-child(3) { max-width: (190/14)+em; }
+		&:nth-child(4) { max-width: (120/14)+em; }
+		&:nth-child(5) { max-width: (120/14)+em; }
+		&:nth-child(6) { max-width: (190/14)+em; }
+		&:nth-child(7) { max-width: (190/14)+em; }
+		&:nth-child(8) { max-width: (190/14)+em; }
+	}
+}
