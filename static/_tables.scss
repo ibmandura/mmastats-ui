@@ -1,5 +1,6 @@
 .ms_short_table {
 	border-collapse: collapse;
+	width:100%;
 
 	tr {
 		height: 40px;
@@ -230,15 +231,92 @@ th.sorting_disabled {
 	padding: 5px;
 }
 
-.stats-table-heading {
-	th:nth-child(1) { max-width: 60px; }
-	th:nth-child(2) { max-width: 140px; }
-	th:nth-child(3) { max-width: 190px; }
-	th:nth-child(4) { max-width: 120px; }
-	th:nth-child(5) { max-width: 120px; }
-	th:nth-child(6) { max-width: 190px; }
-	th:nth-child(7) { max-width: 190px; }
-	th:nth-child(8) { max-width: 190px; }
+/*
+ *
+ * Styles Specific to the ratings table
+ *
+ */
+
+.card--stats-table-wrap {
+	@media (max-width:1200px) {
+		width:100%;
+		max-width:100%;
+
+		&,& *, & *:before, & *:after {
+			box-sizing:border-box;
+		}
+	}
+
+	@media (min-width:1201px) {
+		width:100% !important;
+	}
 }
+
+.rating-table {
+	font-size:20px; // setting a root font size
+	
+	@media (max-width:1200px) {
+		// It looks good in 969px window, so let's set the font based on the viewport width
+		font-size:#{(20/969*100)+'vw'};
+		margin:0 auto;
+		width:100% !important;
+	}
+
+	@media (min-width:1201px) {
+		width:100% !important;
+	}
+
+	tr {
+		font-size:(14/20)+em;
+	}
+
+	th {
+		font-size:1em;
+		padding: (12/14)+em (8/14)+em;
+
+		&.sorting, &.sorting_desc, &.sorting_asc {
+			&:before, &:after {
+				right: 2px;
+			}
+		}
+	}
+
+	tr, th {
+		height:(40/14)+em;
+	}
+
+	td {
+		font-size:1em;
+
+		> a {
+			padding: (12/14)+em (8/14)+em;
+		}
+
+		&.ms_date {
+			font-size:(14/14)+em;
+		}
+
+		&.ms_method {
+			font-size:(15/14)+em;
+		}
+	}
+
+	.sorting, .sorting_asc, .sorting_desc {
+		padding-right: (16/14)+em;
+	}
+
+	th {
+		&:nth-child(1) { max-width: (60/14)+em; }
+		&:nth-child(2) { max-width: (140/14)+em; }
+		&:nth-child(3) { max-width: (190/14)+em; }
+		&:nth-child(4) { max-width: (120/14)+em; }
+		&:nth-child(5) { max-width: (120/14)+em; }
+		&:nth-child(6) { max-width: (190/14)+em; }
+		&:nth-child(7) { max-width: (190/14)+em; }
+		&:nth-child(8) { max-width: (190/14)+em; }
+	}
+}
+
+
 
 
