@@ -2,725 +2,725 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MMAstats</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>MMAstats</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="/static/style.css">
-  <link rel="stylesheet" href="/static/icofont/icofont.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="/static/style.css">
+	<link rel="stylesheet" href="/static/icofont/icofont.min.css">
 
-  <link rel="icon" type="image/svg+xml" href="/static/MMAstats.svg">
+	<link rel="icon" type="image/svg+xml" href="/static/MMAstats.svg">
 </head>
 
 <body class="ms_body">
-  <header>
-    <nav class="ms_navbar">
-      <div class="ms_header_container" >
-        <a class="ms_header_logo" href="/">
-          <img src="/static/MMAstats.svg" class="ms_logo">
-        </a>
+	<header>
+		<nav class="ms_navbar">
+			<div class="ms_header_container" >
+				<a class="ms_header_logo" href="/">
+					<img src="/static/MMAstats.svg" class="ms_logo">
+				</a>
 
-        <i class="mobile_search_toggle icofont-search ms_search_ico"></i>
+				<i class="mobile_search_toggle icofont-search ms_search_ico"></i>
 
-        <div class="ms_header_search_wrapper">
-          <form autocomplete="off" id="fighter-search-form" class="ms_search_form" action="/search">
-            <i class="icofont-search ms_search_ico"></i>
-            <input id="ms-fighter-id" class="ms_fighter_search js-fighterSearch" type="text" name="id" placeholder="Search a fighter...">
-          </form>
-        </div>
+				<div class="ms_header_search_wrapper">
+					<form autocomplete="off" id="fighter-search-form" class="ms_search_form" action="/search">
+						<i class="icofont-search ms_search_ico"></i>
+						<input id="ms-fighter-id" class="ms_fighter_search js-fighterSearch" type="text" name="id" placeholder="Search a fighter...">
+					</form>
+				</div>
 
-        <div class="mobile_nav_toggle">
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
+				<div class="mobile_nav_toggle">
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
 
-        <div class="ms_header_links">
-          <a href="/compare" class="ms_rlink">Compare</a>
-          <a href="/stats" class="ms_rlink">Stats</a>
-          <a href="/about" class="ms_rlink">About</a>
-        </div>
-      </div>
-    </nav>
-  </header>
+				<div class="ms_header_links">
+					<a href="/compare" class="ms_rlink">Compare</a>
+					<a href="/stats" class="ms_rlink">Stats</a>
+					<a href="/about" class="ms_rlink">About</a>
+				</div>
+			</div>
+		</nav>
+	</header>
 
-  <main>
-    <div class="mainContentWrapper">
-      
+	<main>
+		<div class="mainContentWrapper">
+			
 
 <div class="mainWithSidebar mainWithSidebar-wide">
-  <div class="main">
-    <div class="card" style="width: 100%; max-width: 1200px">
-      <h1 class="short_table_title">Stats</h1>
-      <table id="rating-table" class="ms_short_table ms_table_hover" style="width: 100%">
-        <thead>
-          <tr>
-            <th style="max-width: 60px">Rank</th>
-            <th id="stat-header" style="max-width: 140px">Current rating</th>
-            <th style="max-width: 190px;">Fighter</th>
-            <th style="max-width: 120px">Fights</th>
-            <th style="max-width: 120px">Age</th>
-            <th style="max-width: 190px;" >Division</th>
-            <th style="max-width: 190px;">Country</th>
-            <th style="max-width: 190px;">Promotion</th>
-          </tr>
-        </thead>
-      </table>
-    </div>
-  </div>
-  <div class="card sidebar js-sidebarDrawer">
-    <div style="overflow-y: auto;height: 100%;">
-      <div class="short_table_title">Filters</div>
+	<div class="main">
+		<div class="card" style="width: 100%; max-width: 1200px">
+			<h1 class="short_table_title">Stats</h1>
+			<table id="rating-table" class="ms_short_table ms_table_hover" style="width: 100%">
+				<thead>
+					<tr>
+						<th style="max-width: 60px">Rank</th>
+						<th id="stat-header" style="max-width: 140px">Current rating</th>
+						<th style="max-width: 190px;">Fighter</th>
+						<th style="max-width: 120px">Fights</th>
+						<th style="max-width: 120px">Age</th>
+						<th style="max-width: 190px;" >Division</th>
+						<th style="max-width: 190px;">Country</th>
+						<th style="max-width: 190px;">Promotion</th>
+					</tr>
+				</thead>
+			</table>
+		</div>
+	</div>
+	<div class="card sidebar js-sidebarDrawer">
+		<div style="overflow-y: auto;height: 100%;">
+			<div class="short_table_title">Filters</div>
 
-      
+			
 
-      <label class="label" for="stat-select">Statistic</label>
-      <div class="select-wrapper">
-        <select id="stat-select">
-          
-            <option value="peak_rating" >Peak rating</option>
-          
-            <option value="curr_rating" selected>Current rating</option>
-          
-            <option value="number_of_wins" >Wins</option>
-          
-            <option value="number_of_submissions" >Wins by submission</option>
-          
-            <option value="number_of_tkos" >Wins by tko</option>
-          
-        </select>
-      </div>
+			<label class="label" for="stat-select">Statistic</label>
+			<div class="select-wrapper">
+				<select id="stat-select">
+					
+						<option value="peak_rating" >Peak rating</option>
+					
+						<option value="curr_rating" selected>Current rating</option>
+					
+						<option value="number_of_wins" >Wins</option>
+					
+						<option value="number_of_submissions" >Wins by submission</option>
+					
+						<option value="number_of_tkos" >Wins by tko</option>
+					
+				</select>
+			</div>
 
-      <label class="label" for="country-select">Country</label>
-      <div class="select-wrapper">
-        <select id="country-select">
-          <option value="any"></option>
-          
-            <option value="Afghanistan">Afghanistan</option>
-          
-            <option value="Albania">Albania</option>
-          
-            <option value="Algeria">Algeria</option>
-          
-            <option value="American Samoa">American Samoa</option>
-          
-            <option value="Angola">Angola</option>
-          
-            <option value="Argentina">Argentina</option>
-          
-            <option value="Armenia">Armenia</option>
-          
-            <option value="Aruba">Aruba</option>
-          
-            <option value="Australia">Australia</option>
-          
-            <option value="Austria">Austria</option>
-          
-            <option value="Azerbaijan">Azerbaijan</option>
-          
-            <option value="Bahamas">Bahamas</option>
-          
-            <option value="Bahrain">Bahrain</option>
-          
-            <option value="Bangladesh">Bangladesh</option>
-          
-            <option value="Barbados">Barbados</option>
-          
-            <option value="Belarus">Belarus</option>
-          
-            <option value="Belgium">Belgium</option>
-          
-            <option value="Benin">Benin</option>
-          
-            <option value="Bolivia">Bolivia</option>
-          
-            <option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
-          
-            <option value="Brazil">Brazil</option>
-          
-            <option value="Brunei">Brunei</option>
-          
-            <option value="Bulgaria">Bulgaria</option>
-          
-            <option value="Cambodia">Cambodia</option>
-          
-            <option value="Cameroon">Cameroon</option>
-          
-            <option value="Canada">Canada</option>
-          
-            <option value="Cape Verde">Cape Verde</option>
-          
-            <option value="Chile">Chile</option>
-          
-            <option value="China">China</option>
-          
-            <option value="Colombia">Colombia</option>
-          
-            <option value="Comoros">Comoros</option>
-          
-            <option value="Congo">Congo</option>
-          
-            <option value="Congo, Democratic Republic">Congo, Democratic Republic</option>
-          
-            <option value="Costa Rica">Costa Rica</option>
-          
-            <option value="Croatia">Croatia</option>
-          
-            <option value="Cuba">Cuba</option>
-          
-            <option value="Cyprus">Cyprus</option>
-          
-            <option value="Czech Republic">Czech Republic</option>
-          
-            <option value="Denmark">Denmark</option>
-          
-            <option value="Dominican Republic">Dominican Republic</option>
-          
-            <option value="Ecuador">Ecuador</option>
-          
-            <option value="Egypt">Egypt</option>
-          
-            <option value="El Salvador">El Salvador</option>
-          
-            <option value="England">England</option>
-          
-            <option value="Equatorial Guinea">Equatorial Guinea</option>
-          
-            <option value="Estonia">Estonia</option>
-          
-            <option value="Ethiopia">Ethiopia</option>
-          
-            <option value="Finland">Finland</option>
-          
-            <option value="France">France</option>
-          
-            <option value="Gabon">Gabon</option>
-          
-            <option value="Georgia">Georgia</option>
-          
-            <option value="Germany">Germany</option>
-          
-            <option value="Ghana">Ghana</option>
-          
-            <option value="Greece">Greece</option>
-          
-            <option value="Guam">Guam</option>
-          
-            <option value="Guatemala">Guatemala</option>
-          
-            <option value="Guinea">Guinea</option>
-          
-            <option value="Guinea-Bissau">Guinea-Bissau</option>
-          
-            <option value="Guyana">Guyana</option>
-          
-            <option value="Haiti">Haiti</option>
-          
-            <option value="Honduras">Honduras</option>
-          
-            <option value="Hong Kong">Hong Kong</option>
-          
-            <option value="Hungary">Hungary</option>
-          
-            <option value="Iceland">Iceland</option>
-          
-            <option value="India">India</option>
-          
-            <option value="Indonesia">Indonesia</option>
-          
-            <option value="Iran">Iran</option>
-          
-            <option value="Iraq">Iraq</option>
-          
-            <option value="Ireland">Ireland</option>
-          
-            <option value="Israel">Israel</option>
-          
-            <option value="Italy">Italy</option>
-          
-            <option value="Ivory Coast">Ivory Coast</option>
-          
-            <option value="Jamaica">Jamaica</option>
-          
-            <option value="Japan">Japan</option>
-          
-            <option value="Jordan">Jordan</option>
-          
-            <option value="Kazakhstan">Kazakhstan</option>
-          
-            <option value="Kenya">Kenya</option>
-          
-            <option value="Kosovo">Kosovo</option>
-          
-            <option value="Kuwait">Kuwait</option>
-          
-            <option value="Kyrgyzstan">Kyrgyzstan</option>
-          
-            <option value="Laos">Laos</option>
-          
-            <option value="Latvia">Latvia</option>
-          
-            <option value="Lebanon">Lebanon</option>
-          
-            <option value="Liberia">Liberia</option>
-          
-            <option value="Libya">Libya</option>
-          
-            <option value="Liechtenstein">Liechtenstein</option>
-          
-            <option value="Lithuania">Lithuania</option>
-          
-            <option value="Luxembourg">Luxembourg</option>
-          
-            <option value="Macedonia">Macedonia</option>
-          
-            <option value="Madagascar">Madagascar</option>
-          
-            <option value="Malaysia">Malaysia</option>
-          
-            <option value="Malta">Malta</option>
-          
-            <option value="Mauritius">Mauritius</option>
-          
-            <option value="Mexico">Mexico</option>
-          
-            <option value="Micronesia">Micronesia</option>
-          
-            <option value="Moldova">Moldova</option>
-          
-            <option value="Monaco">Monaco</option>
-          
-            <option value="Mongolia">Mongolia</option>
-          
-            <option value="Montenegro">Montenegro</option>
-          
-            <option value="Morocco">Morocco</option>
-          
-            <option value="Myanmar">Myanmar</option>
-          
-            <option value="Nepal">Nepal</option>
-          
-            <option value="Netherlands">Netherlands</option>
-          
-            <option value="New Zealand">New Zealand</option>
-          
-            <option value="Nicaragua">Nicaragua</option>
-          
-            <option value="Nigeria">Nigeria</option>
-          
-            <option value="Northern Ireland">Northern Ireland</option>
-          
-            <option value="Northern Mariana Islands">Northern Mariana Islands</option>
-          
-            <option value="Norway">Norway</option>
-          
-            <option value="Pakistan">Pakistan</option>
-          
-            <option value="Panama">Panama</option>
-          
-            <option value="Papua New Guinea">Papua New Guinea</option>
-          
-            <option value="Paraguay">Paraguay</option>
-          
-            <option value="Peru">Peru</option>
-          
-            <option value="Philippines">Philippines</option>
-          
-            <option value="Poland">Poland</option>
-          
-            <option value="Portugal">Portugal</option>
-          
-            <option value="Puerto Rico">Puerto Rico</option>
-          
-            <option value="Qatar">Qatar</option>
-          
-            <option value="Romania">Romania</option>
-          
-            <option value="Russia">Russia</option>
-          
-            <option value="Samoa">Samoa</option>
-          
-            <option value="Saudi Arabia">Saudi Arabia</option>
-          
-            <option value="Scotland">Scotland</option>
-          
-            <option value="Senegal">Senegal</option>
-          
-            <option value="Serbia">Serbia</option>
-          
-            <option value="Sierra Leone">Sierra Leone</option>
-          
-            <option value="Singapore">Singapore</option>
-          
-            <option value="Slovakia">Slovakia</option>
-          
-            <option value="Slovenia">Slovenia</option>
-          
-            <option value="Solomon Islands">Solomon Islands</option>
-          
-            <option value="South Africa">South Africa</option>
-          
-            <option value="South Korea">South Korea</option>
-          
-            <option value="Spain">Spain</option>
-          
-            <option value="Sri Lanka">Sri Lanka</option>
-          
-            <option value="St Kitts &amp; Nevis">St Kitts &amp; Nevis</option>
-          
-            <option value="Sudan">Sudan</option>
-          
-            <option value="Suriname">Suriname</option>
-          
-            <option value="Sweden">Sweden</option>
-          
-            <option value="Switzerland">Switzerland</option>
-          
-            <option value="Syria">Syria</option>
-          
-            <option value="Taiwan">Taiwan</option>
-          
-            <option value="Tajikistan">Tajikistan</option>
-          
-            <option value="Thailand">Thailand</option>
-          
-            <option value="Togo">Togo</option>
-          
-            <option value="Tonga">Tonga</option>
-          
-            <option value="Trinidad &amp; Tobago">Trinidad &amp; Tobago</option>
-          
-            <option value="Tunisia">Tunisia</option>
-          
-            <option value="Turkey">Turkey</option>
-          
-            <option value="Turkmenistan">Turkmenistan</option>
-          
-            <option value="Uganda">Uganda</option>
-          
-            <option value="Ukraine">Ukraine</option>
-          
-            <option value="United Arab Emirates">United Arab Emirates</option>
-          
-            <option value="United Kingdom">United Kingdom</option>
-          
-            <option value="United States">United States</option>
-          
-            <option value="Unknown">Unknown</option>
-          
-            <option value="Uruguay">Uruguay</option>
-          
-            <option value="Uzbekistan">Uzbekistan</option>
-          
-            <option value="Venezuela">Venezuela</option>
-          
-            <option value="Vietnam">Vietnam</option>
-          
-            <option value="Wales">Wales</option>
-          
-            <option value="Yemen">Yemen</option>
-          
-            <option value="Zambia">Zambia</option>
-          
-            <option value="Zimbabwe">Zimbabwe</option>
-          
-        </select>
-      </div>
+			<label class="label" for="country-select">Country</label>
+			<div class="select-wrapper">
+				<select id="country-select">
+					<option value="any"></option>
+					
+						<option value="Afghanistan">Afghanistan</option>
+					
+						<option value="Albania">Albania</option>
+					
+						<option value="Algeria">Algeria</option>
+					
+						<option value="American Samoa">American Samoa</option>
+					
+						<option value="Angola">Angola</option>
+					
+						<option value="Argentina">Argentina</option>
+					
+						<option value="Armenia">Armenia</option>
+					
+						<option value="Aruba">Aruba</option>
+					
+						<option value="Australia">Australia</option>
+					
+						<option value="Austria">Austria</option>
+					
+						<option value="Azerbaijan">Azerbaijan</option>
+					
+						<option value="Bahamas">Bahamas</option>
+					
+						<option value="Bahrain">Bahrain</option>
+					
+						<option value="Bangladesh">Bangladesh</option>
+					
+						<option value="Barbados">Barbados</option>
+					
+						<option value="Belarus">Belarus</option>
+					
+						<option value="Belgium">Belgium</option>
+					
+						<option value="Benin">Benin</option>
+					
+						<option value="Bolivia">Bolivia</option>
+					
+						<option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+					
+						<option value="Brazil">Brazil</option>
+					
+						<option value="Brunei">Brunei</option>
+					
+						<option value="Bulgaria">Bulgaria</option>
+					
+						<option value="Cambodia">Cambodia</option>
+					
+						<option value="Cameroon">Cameroon</option>
+					
+						<option value="Canada">Canada</option>
+					
+						<option value="Cape Verde">Cape Verde</option>
+					
+						<option value="Chile">Chile</option>
+					
+						<option value="China">China</option>
+					
+						<option value="Colombia">Colombia</option>
+					
+						<option value="Comoros">Comoros</option>
+					
+						<option value="Congo">Congo</option>
+					
+						<option value="Congo, Democratic Republic">Congo, Democratic Republic</option>
+					
+						<option value="Costa Rica">Costa Rica</option>
+					
+						<option value="Croatia">Croatia</option>
+					
+						<option value="Cuba">Cuba</option>
+					
+						<option value="Cyprus">Cyprus</option>
+					
+						<option value="Czech Republic">Czech Republic</option>
+					
+						<option value="Denmark">Denmark</option>
+					
+						<option value="Dominican Republic">Dominican Republic</option>
+					
+						<option value="Ecuador">Ecuador</option>
+					
+						<option value="Egypt">Egypt</option>
+					
+						<option value="El Salvador">El Salvador</option>
+					
+						<option value="England">England</option>
+					
+						<option value="Equatorial Guinea">Equatorial Guinea</option>
+					
+						<option value="Estonia">Estonia</option>
+					
+						<option value="Ethiopia">Ethiopia</option>
+					
+						<option value="Finland">Finland</option>
+					
+						<option value="France">France</option>
+					
+						<option value="Gabon">Gabon</option>
+					
+						<option value="Georgia">Georgia</option>
+					
+						<option value="Germany">Germany</option>
+					
+						<option value="Ghana">Ghana</option>
+					
+						<option value="Greece">Greece</option>
+					
+						<option value="Guam">Guam</option>
+					
+						<option value="Guatemala">Guatemala</option>
+					
+						<option value="Guinea">Guinea</option>
+					
+						<option value="Guinea-Bissau">Guinea-Bissau</option>
+					
+						<option value="Guyana">Guyana</option>
+					
+						<option value="Haiti">Haiti</option>
+					
+						<option value="Honduras">Honduras</option>
+					
+						<option value="Hong Kong">Hong Kong</option>
+					
+						<option value="Hungary">Hungary</option>
+					
+						<option value="Iceland">Iceland</option>
+					
+						<option value="India">India</option>
+					
+						<option value="Indonesia">Indonesia</option>
+					
+						<option value="Iran">Iran</option>
+					
+						<option value="Iraq">Iraq</option>
+					
+						<option value="Ireland">Ireland</option>
+					
+						<option value="Israel">Israel</option>
+					
+						<option value="Italy">Italy</option>
+					
+						<option value="Ivory Coast">Ivory Coast</option>
+					
+						<option value="Jamaica">Jamaica</option>
+					
+						<option value="Japan">Japan</option>
+					
+						<option value="Jordan">Jordan</option>
+					
+						<option value="Kazakhstan">Kazakhstan</option>
+					
+						<option value="Kenya">Kenya</option>
+					
+						<option value="Kosovo">Kosovo</option>
+					
+						<option value="Kuwait">Kuwait</option>
+					
+						<option value="Kyrgyzstan">Kyrgyzstan</option>
+					
+						<option value="Laos">Laos</option>
+					
+						<option value="Latvia">Latvia</option>
+					
+						<option value="Lebanon">Lebanon</option>
+					
+						<option value="Liberia">Liberia</option>
+					
+						<option value="Libya">Libya</option>
+					
+						<option value="Liechtenstein">Liechtenstein</option>
+					
+						<option value="Lithuania">Lithuania</option>
+					
+						<option value="Luxembourg">Luxembourg</option>
+					
+						<option value="Macedonia">Macedonia</option>
+					
+						<option value="Madagascar">Madagascar</option>
+					
+						<option value="Malaysia">Malaysia</option>
+					
+						<option value="Malta">Malta</option>
+					
+						<option value="Mauritius">Mauritius</option>
+					
+						<option value="Mexico">Mexico</option>
+					
+						<option value="Micronesia">Micronesia</option>
+					
+						<option value="Moldova">Moldova</option>
+					
+						<option value="Monaco">Monaco</option>
+					
+						<option value="Mongolia">Mongolia</option>
+					
+						<option value="Montenegro">Montenegro</option>
+					
+						<option value="Morocco">Morocco</option>
+					
+						<option value="Myanmar">Myanmar</option>
+					
+						<option value="Nepal">Nepal</option>
+					
+						<option value="Netherlands">Netherlands</option>
+					
+						<option value="New Zealand">New Zealand</option>
+					
+						<option value="Nicaragua">Nicaragua</option>
+					
+						<option value="Nigeria">Nigeria</option>
+					
+						<option value="Northern Ireland">Northern Ireland</option>
+					
+						<option value="Northern Mariana Islands">Northern Mariana Islands</option>
+					
+						<option value="Norway">Norway</option>
+					
+						<option value="Pakistan">Pakistan</option>
+					
+						<option value="Panama">Panama</option>
+					
+						<option value="Papua New Guinea">Papua New Guinea</option>
+					
+						<option value="Paraguay">Paraguay</option>
+					
+						<option value="Peru">Peru</option>
+					
+						<option value="Philippines">Philippines</option>
+					
+						<option value="Poland">Poland</option>
+					
+						<option value="Portugal">Portugal</option>
+					
+						<option value="Puerto Rico">Puerto Rico</option>
+					
+						<option value="Qatar">Qatar</option>
+					
+						<option value="Romania">Romania</option>
+					
+						<option value="Russia">Russia</option>
+					
+						<option value="Samoa">Samoa</option>
+					
+						<option value="Saudi Arabia">Saudi Arabia</option>
+					
+						<option value="Scotland">Scotland</option>
+					
+						<option value="Senegal">Senegal</option>
+					
+						<option value="Serbia">Serbia</option>
+					
+						<option value="Sierra Leone">Sierra Leone</option>
+					
+						<option value="Singapore">Singapore</option>
+					
+						<option value="Slovakia">Slovakia</option>
+					
+						<option value="Slovenia">Slovenia</option>
+					
+						<option value="Solomon Islands">Solomon Islands</option>
+					
+						<option value="South Africa">South Africa</option>
+					
+						<option value="South Korea">South Korea</option>
+					
+						<option value="Spain">Spain</option>
+					
+						<option value="Sri Lanka">Sri Lanka</option>
+					
+						<option value="St Kitts &amp; Nevis">St Kitts &amp; Nevis</option>
+					
+						<option value="Sudan">Sudan</option>
+					
+						<option value="Suriname">Suriname</option>
+					
+						<option value="Sweden">Sweden</option>
+					
+						<option value="Switzerland">Switzerland</option>
+					
+						<option value="Syria">Syria</option>
+					
+						<option value="Taiwan">Taiwan</option>
+					
+						<option value="Tajikistan">Tajikistan</option>
+					
+						<option value="Thailand">Thailand</option>
+					
+						<option value="Togo">Togo</option>
+					
+						<option value="Tonga">Tonga</option>
+					
+						<option value="Trinidad &amp; Tobago">Trinidad &amp; Tobago</option>
+					
+						<option value="Tunisia">Tunisia</option>
+					
+						<option value="Turkey">Turkey</option>
+					
+						<option value="Turkmenistan">Turkmenistan</option>
+					
+						<option value="Uganda">Uganda</option>
+					
+						<option value="Ukraine">Ukraine</option>
+					
+						<option value="United Arab Emirates">United Arab Emirates</option>
+					
+						<option value="United Kingdom">United Kingdom</option>
+					
+						<option value="United States">United States</option>
+					
+						<option value="Unknown">Unknown</option>
+					
+						<option value="Uruguay">Uruguay</option>
+					
+						<option value="Uzbekistan">Uzbekistan</option>
+					
+						<option value="Venezuela">Venezuela</option>
+					
+						<option value="Vietnam">Vietnam</option>
+					
+						<option value="Wales">Wales</option>
+					
+						<option value="Yemen">Yemen</option>
+					
+						<option value="Zambia">Zambia</option>
+					
+						<option value="Zimbabwe">Zimbabwe</option>
+					
+				</select>
+			</div>
 
-      <label class="label" for="last-fight-select">Fought in last</label>
-      <div class="select-wrapper">
-        <select id="last-fight-select">
-          <option value="any"></option>
-          <option value="6">6 months</option>
-          <option value="12">1 year</option>
-          <option value="18">1.5 years</option>
-          <option value="24">2 years</option>
-        </select>
-      </div>
+			<label class="label" for="last-fight-select">Fought in last</label>
+			<div class="select-wrapper">
+				<select id="last-fight-select">
+					<option value="any"></option>
+					<option value="6">6 months</option>
+					<option value="12">1 year</option>
+					<option value="18">1.5 years</option>
+					<option value="24">2 years</option>
+				</select>
+			</div>
 
-      <label class="label" for="promotion-select">Promotion</label>
-      <div class="select-wrapper">
-        <select id="promotion-select">
-          <option value="any"></option>
-          
-            <option value="Rizin">Rizin</option>
-          
-            <option value="Pride">Pride</option>
-          
-            <option value="UFC">UFC</option>
-          
-            <option value="Bellator">Bellator</option>
-          
-            <option value="KSW">KSW</option>
-          
-            <option value="Cage Warriors">Cage Warriors</option>
-          
-            <option value="ONE">ONE</option>
-          
-            <option value="Invicta">Invicta</option>
-          
-            <option value="Pancrase">Pancrase</option>
-          
-            <option value="WEC">WEC</option>
-          
-            <option value="Dream">Dream</option>
-          
-            <option value="Strikeforce">Strikeforce</option>
-          
-            <option value="IGF">IGF</option>
-          
-            <option value="PFL">PFL</option>
-          
-        </select>
-      </div>
+			<label class="label" for="promotion-select">Promotion</label>
+			<div class="select-wrapper">
+				<select id="promotion-select">
+					<option value="any"></option>
+					
+						<option value="Rizin">Rizin</option>
+					
+						<option value="Pride">Pride</option>
+					
+						<option value="UFC">UFC</option>
+					
+						<option value="Bellator">Bellator</option>
+					
+						<option value="KSW">KSW</option>
+					
+						<option value="Cage Warriors">Cage Warriors</option>
+					
+						<option value="ONE">ONE</option>
+					
+						<option value="Invicta">Invicta</option>
+					
+						<option value="Pancrase">Pancrase</option>
+					
+						<option value="WEC">WEC</option>
+					
+						<option value="Dream">Dream</option>
+					
+						<option value="Strikeforce">Strikeforce</option>
+					
+						<option value="IGF">IGF</option>
+					
+						<option value="PFL">PFL</option>
+					
+				</select>
+			</div>
 
-      <div class="field">
-        <label class="label">Gender</label>
-        <div class="genderRadios">
-          <input type="radio" id="gender-any" name="gender" value="any" checked>
-          <label for="gender-any">
-            Any
-          </label>
-          <input type="radio" id="gender-male" name="gender" value="male">
-          <label for="gender-male">
-            Male
-          </label>
-          <input type="radio" id="gender-female" name="gender" value="female">
-          <label for="gender-female">
-            Female
-          </label>
-        </div>
-      </div>
+			<div class="field">
+				<label class="label">Gender</label>
+				<div class="genderRadios">
+					<input type="radio" id="gender-any" name="gender" value="any" checked>
+					<label for="gender-any">
+						Any
+					</label>
+					<input type="radio" id="gender-male" name="gender" value="male">
+					<label for="gender-male">
+						Male
+					</label>
+					<input type="radio" id="gender-female" name="gender" value="female">
+					<label for="gender-female">
+						Female
+					</label>
+				</div>
+			</div>
 
-      <div class="field">
-        <label class="label">Division</label>
-        <div class="divisionChecks">
-          <input type="checkbox" id="division-Strawweight" name="division" value="Strawweight" checked>
-          <label for="division-Strawweight">Strawweight</label>
-          <input type="checkbox" id="division-Flyweight" name="division" value="Flyweight" checked>
-          <label for="division-Flyweight">Flyweight</label>
-          <input type="checkbox" id="division-Bantamweight" name="division" value="Bantamweight" checked>
-          <label for="division-Bantamweight">Bantamweight</label>
-          <input type="checkbox" id="division-Featherweight" name="division" value="Featherweight" checked>
-          <label for="division-Featherweight">Featherweight</label>
-          <input type="checkbox" id="division-Lightweight" name="division" value="Lightweight" checked>
-          <label for="division-Lightweight">Lightweight</label>
-          <input type="checkbox" id="division-Welterweight" name="division" value="Welterweight" checked>
-          <label for="division-Welterweight">Welterweight</label>
-          <input type="checkbox" id="division-Middleweight" name="division" value="Middleweight" checked>
-          <label for="division-Middleweight">Middleweight</label>
-          <input type="checkbox" id="division-LightHeavyweight" name="division" value="LightHeavyweight" checked>
-          <label for="division-LightHeavyweight">Light Heavyweight</label>
-          <input type="checkbox" id="division-Heavyweight" name="division" value="Heavyweight" checked>
-          <label for="division-Heavyweight">Heavyweight</label>
-        </div>
-      </div>
-    </div>
-  </div>
+			<div class="field">
+				<label class="label">Division</label>
+				<div class="divisionChecks">
+					<input type="checkbox" id="division-Strawweight" name="division" value="Strawweight" checked>
+					<label for="division-Strawweight">Strawweight</label>
+					<input type="checkbox" id="division-Flyweight" name="division" value="Flyweight" checked>
+					<label for="division-Flyweight">Flyweight</label>
+					<input type="checkbox" id="division-Bantamweight" name="division" value="Bantamweight" checked>
+					<label for="division-Bantamweight">Bantamweight</label>
+					<input type="checkbox" id="division-Featherweight" name="division" value="Featherweight" checked>
+					<label for="division-Featherweight">Featherweight</label>
+					<input type="checkbox" id="division-Lightweight" name="division" value="Lightweight" checked>
+					<label for="division-Lightweight">Lightweight</label>
+					<input type="checkbox" id="division-Welterweight" name="division" value="Welterweight" checked>
+					<label for="division-Welterweight">Welterweight</label>
+					<input type="checkbox" id="division-Middleweight" name="division" value="Middleweight" checked>
+					<label for="division-Middleweight">Middleweight</label>
+					<input type="checkbox" id="division-LightHeavyweight" name="division" value="LightHeavyweight" checked>
+					<label for="division-LightHeavyweight">Light Heavyweight</label>
+					<input type="checkbox" id="division-Heavyweight" name="division" value="Heavyweight" checked>
+					<label for="division-Heavyweight">Heavyweight</label>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
 
 <script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
 <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
 
 <script>
-  const divisionCheckboxEls = document.querySelectorAll('input[name="division"]');
-  const genderRadioEls = document.querySelectorAll('input[name="gender"]');
-  const countrySelectEl = document.getElementById('country-select');
-  const statSelectEl = document.getElementById('stat-select');
-  const promotionSelectEl = document.getElementById('promotion-select');
-  const lastFightDateSelectEl = document.getElementById('last-fight-select');
-  const statHeaderEl = document.getElementById('stat-header');
+	const divisionCheckboxEls = document.querySelectorAll('input[name="division"]');
+	const genderRadioEls = document.querySelectorAll('input[name="gender"]');
+	const countrySelectEl = document.getElementById('country-select');
+	const statSelectEl = document.getElementById('stat-select');
+	const promotionSelectEl = document.getElementById('promotion-select');
+	const lastFightDateSelectEl = document.getElementById('last-fight-select');
+	const statHeaderEl = document.getElementById('stat-header');
 
-  function getGenderSelection() {
-    return document.querySelector('input[name="gender"]:checked').value;
-  }
+	function getGenderSelection() {
+		return document.querySelector('input[name="gender"]:checked').value;
+	}
 
-  function getCountrySelection() {
-    return countrySelectEl.options[countrySelectEl.selectedIndex].value;
-  }
+	function getCountrySelection() {
+		return countrySelectEl.options[countrySelectEl.selectedIndex].value;
+	}
 
-  function getStatSelection() {
-    return statSelectEl.options[statSelectEl.selectedIndex].value;
-  }
+	function getStatSelection() {
+		return statSelectEl.options[statSelectEl.selectedIndex].value;
+	}
 
-  function getPromotionSelection() {
-    return promotionSelectEl.options[promotionSelectEl.selectedIndex].value;
-  }
+	function getPromotionSelection() {
+		return promotionSelectEl.options[promotionSelectEl.selectedIndex].value;
+	}
 
-  function getLastFightDateSelection() {
-    return lastFightDateSelectEl.options[lastFightDateSelectEl.selectedIndex].value;
-  }
+	function getLastFightDateSelection() {
+		return lastFightDateSelectEl.options[lastFightDateSelectEl.selectedIndex].value;
+	}
 
-  function getCheckedDivisions() {
-    const ret = {};
-    divisionCheckboxEls.forEach(e => {
-      ret[e.value] = e.checked;
-    });
+	function getCheckedDivisions() {
+		const ret = {};
+		divisionCheckboxEls.forEach(e => {
+			ret[e.value] = e.checked;
+		});
 
-    return ret;
-  }
+		return ret;
+	}
 
-  function renderTdFor(attribute, className) {
-    return function(data, type, row, meta) {
-      return `<a href="/fighter/${row.fid}" class="${className}">${row[attribute]}</a>`
-    }
-  }
+	function renderTdFor(attribute, className) {
+		return function(data, type, row, meta) {
+			return `<a href="/fighter/${row.fid}" class="${className}">${row[attribute]}</a>`
+		}
+	}
 
-  const column = (attribute, { className = '' } = {}) => ({
-    data: attribute,
-    render: function(data, type, row, meta) {
-      return `<a href="/fighter/${row.fid}" class="${className}">${row[attribute]}</a>`
-    }
-  })
+	const column = (attribute, { className = '' } = {}) => ({
+		data: attribute,
+		render: function(data, type, row, meta) {
+			return `<a href="/fighter/${row.fid}" class="${className}">${row[attribute]}</a>`
+		}
+	})
 
-  $(document).ready(() => {
-    const table = $('#rating-table').DataTable({
-        "language": {
-          "processing": ''
-        },
-        "processing": true,
-        "serverSide": true,
-        "ajax": {
-          url: '/api/ratings.js',
-          cache: false,
-          data: function (datatables_data) {
-            return {
-              ...datatables_data,
-              ...getCheckedDivisions(),
-              gender: getGenderSelection(),
-              country: getCountrySelection(),
-              stat: getStatSelection(),
-              promotion: getPromotionSelection(),
-              last_date: getLastFightDateSelection(),
-            };
-          },
-        },
-        "columns": [
-            column('rank', { className: 'ms_rating' }),
-            column('stat', { className: 'ms_rating_score' }),
-            column('name', { className: 'ms_fighter_link' }),
-            column("num_fights"),
-            column("age"),
-            column("division"),
-            //column("height"),
-            //column("gender"),
-            column("country"),
-            column("promotion"),
-            //column("last_fight_date"),
-        ],
-        "pageLength": 50,
-        "displayStart": 0,
-        "searching": false,
-        "lengthChange": false,
-        "ordering": true,
-        "order": [[ 1, "desc" ]],
-    });
+	$(document).ready(() => {
+		const table = $('#rating-table').DataTable({
+				"language": {
+					"processing": ''
+				},
+				"processing": true,
+				"serverSide": true,
+				"ajax": {
+					url: '/api/ratings.js',
+					cache: false,
+					data: function (datatables_data) {
+						return {
+							...datatables_data,
+							...getCheckedDivisions(),
+							gender: getGenderSelection(),
+							country: getCountrySelection(),
+							stat: getStatSelection(),
+							promotion: getPromotionSelection(),
+							last_date: getLastFightDateSelection(),
+						};
+					},
+				},
+				"columns": [
+						column('rank', { className: 'ms_rating' }),
+						column('stat', { className: 'ms_rating_score' }),
+						column('name', { className: 'ms_fighter_link' }),
+						column("num_fights"),
+						column("age"),
+						column("division"),
+						//column("height"),
+						//column("gender"),
+						column("country"),
+						column("promotion"),
+						//column("last_fight_date"),
+				],
+				"pageLength": 50,
+				"displayStart": 0,
+				"searching": false,
+				"lengthChange": false,
+				"ordering": true,
+				"order": [[ 1, "desc" ]],
+		});
 
-    [ ...genderRadioEls,
-      ...divisionCheckboxEls,
-      countrySelectEl,
-      statSelectEl,
-      lastFightDateSelectEl,
-      promotionSelectEl,
-    ].forEach(el => {
-      el.addEventListener("input", e => {
-        if (el == statSelectEl) {
-          statHeaderEl.innerText = statSelectEl.options[statSelectEl.selectedIndex].innerText;
-        }
-        table.draw()
-      });
-    });
-  });
+		[ ...genderRadioEls,
+			...divisionCheckboxEls,
+			countrySelectEl,
+			statSelectEl,
+			lastFightDateSelectEl,
+			promotionSelectEl,
+		].forEach(el => {
+			el.addEventListener("input", e => {
+				if (el == statSelectEl) {
+					statHeaderEl.innerText = statSelectEl.options[statSelectEl.selectedIndex].innerText;
+				}
+				table.draw()
+			});
+		});
+	});
 
 
 </script>
 
 
-    </div>
-  </main>
+		</div>
+	</main>
 
-  <footer class="ms_column">
-    <label class="ms_follow_us">FOLLOW US</label>
-    <div class="ms_row ms_row_center" >
-      <i class="icofont-twitter" style="color: #55B1FB; height: 16px; width: 19px;"></i>
-      <label class="ms_mmastat_twitter">@MMAstat</label>
-    </div>
-    <div class="ms_row ms_row_center foot_nav">
-      <a href="/" class="foot_nav_link">HOME</a>
-      <a href="/stats" class="foot_nav_link">STATS</a>
-      <a href="/about" class="foot_nav_link">ABOUT</a>
-    </div>
-    <label class="ms_copyright">© 2020 MMAstats</label>
-  </footer>
+	<footer class="ms_column">
+		<label class="ms_follow_us">FOLLOW US</label>
+		<div class="ms_row ms_row_center" >
+			<i class="icofont-twitter" style="color: #55B1FB; height: 16px; width: 19px;"></i>
+			<label class="ms_mmastat_twitter">@MMAstat</label>
+		</div>
+		<div class="ms_row ms_row_center foot_nav">
+			<a href="/" class="foot_nav_link">HOME</a>
+			<a href="/stats" class="foot_nav_link">STATS</a>
+			<a href="/about" class="foot_nav_link">ABOUT</a>
+		</div>
+		<label class="ms_copyright">© 2020 MMAstats</label>
+	</footer>
 
-  <script src="/static/FuzzySearch.min.js"></script>
-  <script src="/static/fuzzy.js"></script>
+	<script src="/static/FuzzySearch.min.js"></script>
+	<script src="/static/fuzzy.js"></script>
 
-  <script src="/asset/top_fighters.js" ></script>
-  <script>
-    const topNames = Object.keys(name2id);
-    const engine = new FuzzySearch({source: topNames, output_limit: 3, thresh_include: 5.0});
-    const searchInputs = document.querySelectorAll('.js-fighterSearch');
+	<script src="/asset/top_fighters.js" ></script>
+	<script>
+		const topNames = Object.keys(name2id);
+		const engine = new FuzzySearch({source: topNames, output_limit: 3, thresh_include: 5.0});
+		const searchInputs = document.querySelectorAll('.js-fighterSearch');
 
-    function getInputNameAttributeFromInputId(el) {
-      // this is too much of domain knowledge, coming out of nowhere, maybe we should refactor this
-      const nameParts = el.name.split('_')
-      lastPart = nameParts[nameParts.length - 1]
-      number = parseInt(lastPart)
-      return isNaN(number) ? 'name' : `name_${number}`
-    }
+		function getInputNameAttributeFromInputId(el) {
+			// this is too much of domain knowledge, coming out of nowhere, maybe we should refactor this
+			const nameParts = el.name.split('_')
+			lastPart = nameParts[nameParts.length - 1]
+			number = parseInt(lastPart)
+			return isNaN(number) ? 'name' : `name_${number}`
+		}
 
-    searchInputs.forEach(function(el, index) {
-      const inputNameAttr = getInputNameAttributeFromInputId(el);
-      fuzzyAutocomplete(el, engine, inputNameAttr, name2id);
-    })
-  </script>
+		searchInputs.forEach(function(el, index) {
+			const inputNameAttr = getInputNameAttributeFromInputId(el);
+			fuzzyAutocomplete(el, engine, inputNameAttr, name2id);
+		})
+	</script>
 
-  
-  <div class="js-templates" style="display: none">
-    <div class="js-sidebarDrawer-toggler-template">
-      <svg enable-background="new 0 0 32 32" height="32px" id="Layer_1" version="1.1" viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M7.701,14.276l9.586-9.585c0.879-0.878,2.317-0.878,3.195,0l0.801,0.8c0.878,0.877,0.878,2.316,0,3.194  L13.968,16l7.315,7.315c0.878,0.878,0.878,2.317,0,3.194l-0.801,0.8c-0.878,0.879-2.316,0.879-3.195,0l-9.586-9.587  C7.229,17.252,7.02,16.62,7.054,16C7.02,15.38,7.229,14.748,7.701,14.276z" fill="#FFF"/></svg>
-    </div>
-  </div>
+	
+	<div class="js-templates" style="display: none">
+		<div class="js-sidebarDrawer-toggler-template">
+			<svg enable-background="new 0 0 32 32" height="32px" id="Layer_1" version="1.1" viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M7.701,14.276l9.586-9.585c0.879-0.878,2.317-0.878,3.195,0l0.801,0.8c0.878,0.877,0.878,2.316,0,3.194  L13.968,16l7.315,7.315c0.878,0.878,0.878,2.317,0,3.194l-0.801,0.8c-0.878,0.879-2.316,0.879-3.195,0l-9.586-9.587  C7.229,17.252,7.02,16.62,7.054,16C7.02,15.38,7.229,14.748,7.701,14.276z" fill="#FFF"/></svg>
+		</div>
+	</div>
 
-  <script>
-    const popoverOpener = function(togglerEl, destinationEl, className = 'is-expanded') {
-      togglerEl.addEventListener('click', function() {
-        togglerEl.classList.toggle(className)
-        destinationEl.classList.toggle(className)
-      })
+	<script>
+		const popoverOpener = function(togglerEl, destinationEl, className = 'is-expanded') {
+			togglerEl.addEventListener('click', function() {
+				togglerEl.classList.toggle(className)
+				destinationEl.classList.toggle(className)
+			})
 
-      document.body.addEventListener('click', function(e) {
-        const togglerClicked = togglerEl.contains(e.target)
-        const isExpanded = destinationEl.classList.contains(className)
-        if (!isExpanded || togglerClicked) return;
+			document.body.addEventListener('click', function(e) {
+				const togglerClicked = togglerEl.contains(e.target)
+				const isExpanded = destinationEl.classList.contains(className)
+				if (!isExpanded || togglerClicked) return;
 
-        const isClickedOutsideContainer = !destinationEl.contains(e.target)
-        if (isClickedOutsideContainer) {
-          togglerEl.classList.remove(className)
-          destinationEl.classList.remove(className)
-        }
-      })
-    }
+				const isClickedOutsideContainer = !destinationEl.contains(e.target)
+				if (isClickedOutsideContainer) {
+					togglerEl.classList.remove(className)
+					destinationEl.classList.remove(className)
+				}
+			})
+		}
 
-    const mobileNavTogglerEl = document.querySelector('.mobile_nav_toggle')
-    const headerNavContainerEl = document.querySelector('.ms_header_links')
-    popoverOpener(mobileNavTogglerEl, headerNavContainerEl)
+		const mobileNavTogglerEl = document.querySelector('.mobile_nav_toggle')
+		const headerNavContainerEl = document.querySelector('.ms_header_links')
+		popoverOpener(mobileNavTogglerEl, headerNavContainerEl)
 
-    const mobileSearchTogglerEl = document.querySelector('.mobile_search_toggle')
-    const ms_header_containerEl = document.querySelector('.ms_header_search_wrapper')
-    popoverOpener(mobileSearchTogglerEl, ms_header_containerEl)
+		const mobileSearchTogglerEl = document.querySelector('.mobile_search_toggle')
+		const ms_header_containerEl = document.querySelector('.ms_header_search_wrapper')
+		popoverOpener(mobileSearchTogglerEl, ms_header_containerEl)
 
-    const sidebarTogglerHtml = document.querySelector('.js-templates .js-sidebarDrawer-toggler-template').innerHTML
-    document.querySelectorAll('.js-sidebarDrawer').forEach(function(el) {
-      el.classList.add('sidebarDrawer')
-      const sidebarTogglerEl = document.createElement('div')
-      sidebarTogglerEl.classList.add('sidebarToggle')
-      sidebarTogglerEl.innerHTML = sidebarTogglerHtml
-      el.appendChild(sidebarTogglerEl)
-      popoverOpener(sidebarTogglerEl, el)
-    })
-  </script>
+		const sidebarTogglerHtml = document.querySelector('.js-templates .js-sidebarDrawer-toggler-template').innerHTML
+		document.querySelectorAll('.js-sidebarDrawer').forEach(function(el) {
+			el.classList.add('sidebarDrawer')
+			const sidebarTogglerEl = document.createElement('div')
+			sidebarTogglerEl.classList.add('sidebarToggle')
+			sidebarTogglerEl.innerHTML = sidebarTogglerHtml
+			el.appendChild(sidebarTogglerEl)
+			popoverOpener(sidebarTogglerEl, el)
+		})
+	</script>
 </body>
 </html>

@@ -66,6 +66,14 @@
 		"oAP": "/index.html",
 		"oF": 0
 		},
+	"/README.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/README.html",
+		"oF": 0
+		},
 	"/README.md": {
 		"cB": 0,
 		"cS": 0,
@@ -84,6 +92,19 @@
 		"pME": 1,
 		"rFN": 0,
 		"uCM": 0
+		},
+	"/static/_tables.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/static/_tables.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
 		},
 	"/static/Chart.js": {
 		"bF": 0,
@@ -209,16 +230,6 @@
 		"plM": 52780316221407,
 		"prP": 0
 		},
-	"/static/style-min.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/static/style-min-min.css",
-		"oF": 0,
-		"oS": 3
-		},
 	"/static/style.css": {
 		"aP": 1,
 		"bl": 0,
@@ -228,6 +239,19 @@
 		"oAP": "/static/style-min.css",
 		"oF": 0,
 		"oS": 3
+		},
+	"/static/style.scss": {
+		"aP": 1,
+		"bl": 1,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/static/style.css",
+		"oF": 0,
+		"oS": 1,
+		"uL": 1
 		},
 	"/stats.html": {
 		"cB": 0,

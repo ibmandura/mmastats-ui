@@ -1,0 +1,231 @@
+.ms_short_table {
+	border-collapse: collapse;
+
+	tr {
+		height: 40px;
+		font-weight: normal;
+	}
+}
+
+th {
+	height: 40px;
+	font-weight: normal;
+}
+
+.ms_short_table tr {
+	box-shadow: inset 0 -1px 0 0 rgba(83, 96, 115, 0.6);
+}
+
+.record-table-wrapper {
+	overflow-x: auto;
+}
+
+.ms_short_table {
+	tbody tr td.is-highlighted {
+		background-color: var(--body-bg-color-lighter);
+	}
+
+	th {
+		/*white-space: nowrap;*/
+		color: #FFFFFF;
+		font-size: 14px;
+		padding: 12px 8px;
+		text-align: left;
+	}
+
+	td {
+		color: var(--secondary-color);
+
+		> a {
+			display: block;
+			padding: 12px 8px;
+			text-align: left;
+			color: var(--secondary-color);
+			text-decoration: none;
+		}
+
+		a.ms_rating {
+			font-weight: bold;
+		}
+	}
+
+	.ms_rating_score {
+		color: #FFFFFF;
+		font-weight: bold;
+	}
+
+	td {
+		&.ms_date {
+			text-align: center;
+			font-size: 14px;
+		}
+
+		&.ms_round_and_time {
+			text-align: center;
+		}
+
+		&.ms_method {
+			font-size: 15px;
+		}
+
+		a.ms_fighter_link {
+			color: var(--link-color);
+			font-weight: 500;
+		}
+	}
+
+	thead {
+		background-color: var(--thead-bg-color);
+	}
+
+	tfoot {
+		display: flex;
+		justify-content: flex-end;
+	}
+
+	.sorting, .sorting_asc, .sorting_desc {
+		padding-right: 16px;
+		cursor: pointer;
+		position: relative;
+	}
+}
+
+/* make space for sorting arrows */
+
+.sorting {
+	&:before, &:after {
+		font-family: IcoFont !important;
+		speak: none;
+		font-style: normal;
+		font-weight: 400;
+		font-variant: normal;
+		text-transform: none;
+		white-space: nowrap;
+		word-wrap: normal;
+		direction: ltr;
+		line-height: 1;
+		-webkit-font-feature-settings: "liga";
+		-webkit-font-smoothing: antialiased;
+		position: absolute;
+		right: 2px;
+		transform: translateY(-50%) scale(0.8);
+	}
+}
+
+.sorting_asc {
+	&:before, &:after {
+		font-family: IcoFont !important;
+		speak: none;
+		font-style: normal;
+		font-weight: 400;
+		font-variant: normal;
+		text-transform: none;
+		white-space: nowrap;
+		word-wrap: normal;
+		direction: ltr;
+		line-height: 1;
+		-webkit-font-feature-settings: "liga";
+		-webkit-font-smoothing: antialiased;
+		position: absolute;
+		right: 2px;
+		transform: translateY(-50%) scale(0.8);
+	}
+}
+
+.sorting_desc {
+	&:before, &:after {
+		font-family: IcoFont !important;
+		speak: none;
+		font-style: normal;
+		font-weight: 400;
+		font-variant: normal;
+		text-transform: none;
+		white-space: nowrap;
+		word-wrap: normal;
+		direction: ltr;
+		line-height: 1;
+		-webkit-font-feature-settings: "liga";
+		-webkit-font-smoothing: antialiased;
+		position: absolute;
+		right: 2px;
+		transform: translateY(-50%) scale(0.8);
+	}
+}
+
+.select-wrapper:after {
+	font-family: IcoFont !important;
+	speak: none;
+	font-style: normal;
+	font-weight: 400;
+	font-variant: normal;
+	text-transform: none;
+	white-space: nowrap;
+	word-wrap: normal;
+	direction: ltr;
+	line-height: 1;
+	-webkit-font-feature-settings: "liga";
+	-webkit-font-smoothing: antialiased;
+	position: absolute;
+	right: 2px;
+	transform: translateY(-50%) scale(0.8);
+}
+
+.sorting:before, .sorting_asc:before {
+	/* up arrow */
+	content: "\ea6a";
+	top: calc(50% - 3px);
+}
+
+.sorting:after, .sorting_desc:after, .select-wrapper:after {
+	/* down arrow */
+	content: "\ea67";
+	top: calc(50% + 3px);
+}
+
+.sorting_desc:after {
+	top: calc(50% + 1px);
+}
+
+.select-wrapper:after {
+	top: calc(50% + 1px);
+	right: 13px;
+	pointer-events: none;
+}
+
+.dataTables_wrapper {
+	position: relative;
+	margin-bottom: -10px;
+	overflow: hidden;
+}
+
+.dataTables_processing {
+	position: absolute;
+	background: #fff;
+	height: 2px;
+	width: 90%;
+	animation: datatablesLoadingIndicator 4.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+
+	&:after {
+		content: '';
+		position: absolute;
+		right: 0px;
+		width: 100px;
+		height: 100%;
+		box-shadow: 0 0 10px #fff, 0 0 5px #fff;
+		transform: rotate(3deg) translate(0px, -4px);
+	}
+}
+
+@keyframes datatablesLoadingIndicator {
+	0% {
+		width: 1%;
+	}
+
+	100% {
+		width: 90%;
+	}
+}
+
+th.sorting_disabled {
+	padding: 5px;
+}
