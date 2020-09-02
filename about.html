@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MMAstats</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="/static/style.css">
+  <link rel="stylesheet" href="/static/icofont/icofont.min.css">
+
+  <link rel="icon" type="image/svg+xml" href="/static/MMAstats.svg">
+</head>
+
+<body class="ms_body">
+  <header>
+    <nav class="ms_navbar">
+      <div class="ms_header_container" >
+        <a class="ms_header_logo" href="/">
+          <img src="/static/MMAstats.svg" class="ms_logo">
+        </a>
+
+        <i class="mobile_search_toggle icofont-search ms_search_ico"></i>
+
+        <div class="ms_header_search_wrapper">
+          <form autocomplete="off" id="fighter-search-form" class="ms_search_form" action="/search">
+            <i class="icofont-search ms_search_ico"></i>
+            <input id="ms-fighter-id" class="ms_fighter_search js-fighterSearch" type="text" name="id" placeholder="Search a fighter...">
+          </form>
+        </div>
+
+        <div class="mobile_nav_toggle">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+
+        <div class="ms_header_links">
+          <a href="/compare" class="ms_rlink">Compare</a>
+          <a href="/stats" class="ms_rlink">Stats</a>
+          <a href="/about" class="ms_rlink">About</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="mainContentWrapper">
+      
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<div class="card blog-card">
+  <h2>Motivation and objective</h2>
+  Our goal is to create an objective and trasparent way to rank MMA fighters. 
+
+  <br><br/>
+  Currently, every promotion has its own way to rank fighters, usually in a non-transparent, business oriented way. 
+  There are a couple of websites that do the same, but either their database too small, or they use subjective methods like opinion of the author.
+
+  <br><br/>
+  When a new fan is first introduced to the sport, they often lack a frame of reference. Who is good, who is great, who is average? All those questions could be answered, to some degree, by a rating system.
+
+
+  <h2>What is ELO rating?</h2>
+  <a class="about-link" href="https://en.wikipedia.org/wiki/Elo_rating_system#:~:text=The%20Elo%20rating%20system%20is,a%20Hungarian%2DAmerican%20physics%20professor.&text=Two%20players%20with%20equal%20ratings,an%20equal%20number%20of%20wins.">ELO rating</a> is a method for calculating the relative skill levels of a players in zero-sum games such as chess. It has found its application in video games, association football, American football, basketball, Major League Baseball, table tennis, board games such as Scrabble and Diplomacy, and other games. 
+  <br/><br/>
+  The basic idea is that each player is given certain amount of rating in beginning. After each game winner takes some amount of rating from the opponent, based on the players ratings. If a lower rated player beats a higher rated player, more rating is taken from the stronger player and given to the weaker player than if reverse was to be the case.
+
+  <h2>Algorithm</h2>
+  Performance is not measured absolutely; it is inferred from wins, losses, and draws against other players. Players' ratings depend on the ratings of their opponents and the results scored against them.
+
+  Every fighter is given 1400 rating in the beginning. 
+
+  If Player A has a rating of <img class="var-image" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/0b096f1c60d7fdc543f3bc583fe32601f1c2f0cf"> and Player B a rating of <img class="var-image" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/33d79a4532363bb4ed9602166704c3f98928478f">, the exact formula for the expected score of Player A is
+
+  <img class="formula-image" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/51346e1c65f857c0025647173ae48ddac904adcb"/>
+
+  Expected score for Player B is
+  <img class="formula-image" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/4b340e7d15e61ee7d90f428dcf7f4b3c049d89ff"/>
+
+  The result for player A (<img class="var-image" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/f581ca4fd5bc6d22270c6050703cf23e5b840435"/>) is 1.0 for a win, 0.9  for a majority decision win, 0.75 for a split decision win, 0.5 for a draw,  0.25 for a split decision loss, 0.1 for a majority decision loss, 0.0 for a loss.
+
+  The rating change for player A is calculated as follows
+  <img class="formula-image" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/09a11111b433582eccbb22c740486264549d1129"/>
+
+  The maximum possible adjustment per game, called the K-factor, starts with value of 75 in the beginning. That implies that beating somebody of a smiliar rating gives you 32.5 points. The K factor decreases by 10% with each fight for a particular fighter reaching the minimum value of 38. The K factor is automatically set to 38 when a fighter reaches "elite" rating level, which is set at 1800.
+
+  <h2>Limitations</h2>
+  Lack of available data limits possiblities with the rating formula. Judges score cards could help, as beating someone 50-45 or 48-47 is not the same. However, we do not award stoppage victories over unanimuous decision victories.
+
+
+</div>
+
+
+    </div>
+  </main>
+
+  <footer class="ms_column">
+    <label class="ms_follow_us">FOLLOW US</label>
+    <div class="ms_row ms_row_center" >
+      <i class="icofont-twitter" style="color: #55B1FB; height: 16px; width: 19px;"></i>
+      <label class="ms_mmastat_twitter">@MMAstat</label>
+    </div>
+    <div class="ms_row ms_row_center foot_nav">
+      <a href="/" class="foot_nav_link">HOME</a>
+      <a href="/stats" class="foot_nav_link">STATS</a>
+      <a href="/about" class="foot_nav_link">ABOUT</a>
+    </div>
+    <label class="ms_copyright">© 2020 MMAstats</label>
+  </footer>
+
+  <script src="/static/FuzzySearch.min.js"></script>
+  <script src="/static/fuzzy.js"></script>
+
+  <script src="/asset/top_fighters.js" ></script>
+  <script>
+    const topNames = Object.keys(name2id);
+    const engine = new FuzzySearch({source: topNames, output_limit: 3, thresh_include: 5.0});
+    const searchInputs = document.querySelectorAll('.js-fighterSearch');
+
+    function getInputNameAttributeFromInputId(el) {
+      // this is too much of domain knowledge, coming out of nowhere, maybe we should refactor this
+      const nameParts = el.name.split('_')
+      lastPart = nameParts[nameParts.length - 1]
+      number = parseInt(lastPart)
+      return isNaN(number) ? 'name' : `name_${number}`
+    }
+
+    searchInputs.forEach(function(el, index) {
+      const inputNameAttr = getInputNameAttributeFromInputId(el);
+      fuzzyAutocomplete(el, engine, inputNameAttr, name2id);
+    })
+  </script>
+
+  
+  <div class="js-templates" style="display: none">
+    <div class="js-sidebarDrawer-toggler-template">
+      <svg enable-background="new 0 0 32 32" height="32px" id="Layer_1" version="1.1" viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M7.701,14.276l9.586-9.585c0.879-0.878,2.317-0.878,3.195,0l0.801,0.8c0.878,0.877,0.878,2.316,0,3.194  L13.968,16l7.315,7.315c0.878,0.878,0.878,2.317,0,3.194l-0.801,0.8c-0.878,0.879-2.316,0.879-3.195,0l-9.586-9.587  C7.229,17.252,7.02,16.62,7.054,16C7.02,15.38,7.229,14.748,7.701,14.276z" fill="#FFF"/></svg>
+    </div>
+  </div>
+
+  <script>
+    const popoverOpener = function(togglerEl, destinationEl, className = 'is-expanded') {
+      togglerEl.addEventListener('click', function() {
+        togglerEl.classList.toggle(className)
+        destinationEl.classList.toggle(className)
+      })
+
+      document.body.addEventListener('click', function(e) {
+        const togglerClicked = togglerEl.contains(e.target)
+        const isExpanded = destinationEl.classList.contains(className)
+        if (!isExpanded || togglerClicked) return;
+
+        const isClickedOutsideContainer = !destinationEl.contains(e.target)
+        if (isClickedOutsideContainer) {
+          togglerEl.classList.remove(className)
+          destinationEl.classList.remove(className)
+        }
+      })
+    }
+
+    const mobileNavTogglerEl = document.querySelector('.mobile_nav_toggle')
+    const headerNavContainerEl = document.querySelector('.ms_header_links')
+    popoverOpener(mobileNavTogglerEl, headerNavContainerEl)
+
+    const mobileSearchTogglerEl = document.querySelector('.mobile_search_toggle')
+    const ms_header_containerEl = document.querySelector('.ms_header_search_wrapper')
+    popoverOpener(mobileSearchTogglerEl, ms_header_containerEl)
+
+    const sidebarTogglerHtml = document.querySelector('.js-templates .js-sidebarDrawer-toggler-template').innerHTML
+    document.querySelectorAll('.js-sidebarDrawer').forEach(function(el) {
+      el.classList.add('sidebarDrawer')
+      const sidebarTogglerEl = document.createElement('div')
+      sidebarTogglerEl.classList.add('sidebarToggle')
+      sidebarTogglerEl.innerHTML = sidebarTogglerHtml
+      el.appendChild(sidebarTogglerEl)
+      popoverOpener(sidebarTogglerEl, el)
+    })
+  </script>
+</body>
+</html>

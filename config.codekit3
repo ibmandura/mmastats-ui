@@ -17,6 +17,14 @@
 		"oAP": "/.gitignore",
 		"oF": 0
 		},
+	"/about.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/about.html",
+		"oF": 0
+		},
 	"/api/ratings.js": {
 		"bF": 0,
 		"ft": 64,
@@ -64,6 +72,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/figher.html",
+		"oF": 0
+		},
+	"/home.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/home.html",
 		"oF": 0
 		},
 	"/index.html": {
