@@ -267,6 +267,19 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"/static/scss/style.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/static/style.css",
+		"oF": 2,
+		"oS": 1,
+		"uL": 1
+		},
 	"/static/style.css": {
 		"aP": 1,
 		"bl": 0,
@@ -276,19 +289,6 @@
 		"oAP": "/static/style-min.css",
 		"oF": 0,
 		"oS": 3
-		},
-	"/static/style.scss": {
-		"aP": 1,
-		"bl": 1,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/static/style.css",
-		"oF": 0,
-		"oS": 1,
-		"uL": 1
 		},
 	"/stats.html": {
 		"cB": 0,
